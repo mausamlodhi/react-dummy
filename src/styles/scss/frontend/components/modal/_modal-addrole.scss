@@ -1,0 +1,47 @@
+.addRole{
+    .fomt-group-mb{
+        margin-bottom: 30px;
+    }
+    &_head{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    &_innerhead{
+        margin-bottom: 30px;
+        margin-right: 40px;
+        h4{
+            font-size: 16px;
+            font-family: font(sb);
+            margin-bottom: 15px;
+        }
+        .ant-checkbox-wrapper{
+            font-size: 16px;
+            &:not(:last-child){
+                margin-right: 35px;
+            }
+        }
+    }
+    @include media-breakpoint-down(md){
+        &_head{
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        &_innerhead{
+            margin-right: 20px;
+            margin-bottom: 10px;
+            h4{
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+            .ant-checkbox-wrapper{
+                margin-bottom: 10px;
+                margin-left: 0;
+                font-size: 14px;
+                &:not(:last-child){
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+    
+}

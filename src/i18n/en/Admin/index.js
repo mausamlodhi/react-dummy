@@ -1,0 +1,9 @@
+export { appLanguage as adminAuth } from "./Auth/index.i18n";
+export { appLanguage as adminUserManagement } from "./UserManagement/index.i18n";
+export { appLanguage as adminUpdateProfile } from "./AdminUpdateProfile/index.i18n";
+export { appLanguage as adminCms } from "./ManageCms/index.i18n";
+export { appLanguage as manageQueries } from "./ManageQueries/index.i18n";
+export { appLanguage as manageSubscription } from "./ManageSubscription/index.i18n";
+export { appLanguage as adminManageRoles } from "./ManageRole/index.i18n";
+export { appLanguage as adminManageLoop } from "./ManageLoop/index.i18n";
+export { appLanguage as master } from "./Master/index.i18n";

@@ -1,0 +1,125 @@
+.addParticipants{
+    max-width: 772px;
+    .form-group{
+        label{width:160px;}
+        .subPera{font-size:14px;color:rgba(color(700), 0.7);}
+        .ant-form-item{width:100%;}
+        &.inviteLink{
+            .form-control{
+                padding-right:150px;
+            }
+            .btn-inviteLink{
+                position:absolute;right:6px !important;top:6px;
+            }
+        }
+        &.addParticipants{
+            .form-control{
+                padding-right:90px;
+            }
+        }
+        .btn-dark , .btn-inviteLink{
+            height:40px;padding-inline:20px;line-height:16px;
+        }
+        .btn-dark{
+            background-color:#B3B3B3;border-color:#B3B3B3;
+        }
+    }
+    .participantsDrop{
+        @include absolutecenter('y');
+        right:9px;z-index:1;
+    }
+    .dropdown{
+        .dropdown-menu{margin-left:auto !important;}
+        .dropdown-toggle{
+            color:color(700);position:relative;
+            .name{
+                margin-right:15px;   
+            }
+            .icon-arrow-down{
+                font-size:10px;line-height:10px;color:color(580);
+            }
+        }
+    }
+    &_list{
+        max-height: 270px;overflow-y: auto;  
+        padding-right: 7px;  
+        .form-group{
+            &:not(:last-child){margin-bottom:15px;}
+        }
+    }
+    .searchBox{
+        .form-group{
+            .form-control{
+                background-color: color(50);
+                border-color: color(90);
+            }
+        } 
+        .searchList-files{display: none;}
+    }
+    .btn{min-width: 102px;}
+    // modal
+    @include media-breakpoint-down(xxl){
+        .form-group{
+            label{width:130px;}
+            &.inviteLink {
+                .btn-inviteLink{top:0;right:0 !important;height:100%;padding:5px;}
+            }
+        }
+        .searchBox{max-width: 100%;}
+    }
+    @include media-breakpoint-down(lg){
+        .dropdown{
+            .dropdown-toggle{
+                .name{
+                    margin-right:10px;font-size:14px;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(md){
+        .form-group{
+            &.addParticipants{
+                .form-control{padding-right:40px;}
+            }
+            &.inviteLink{
+                .form-control{
+                    padding-right:50px;
+                }
+            }
+            .btn{
+                min-width:auto;width:40px;height:40px;
+                em{font-size:14px;}
+                .icon{&:before{color:color(50);}}
+            }
+        }
+    }
+    @include media-breakpoint-down(sm){
+        .user{
+            &_info{
+                h6{font-size:14px;}
+            }
+        }
+        .form-group{
+            &.addParticipants{
+                .form-control{padding-right:70px;}
+            }
+            .btn{
+                min-width:auto;width:40px;
+                .icon{&:before{color:color(50);}}
+            }
+        }
+        .dropdown{
+            .dropdown-toggle{
+                .name{margin-right:5px;}
+            }
+        }
+    }
+    @media (max-width: 460px){
+        .searchBox{display: block;position: relative;left: 0;
+            .form-control{
+                padding-right: 35px;
+            }
+        }
+    }
+    // modal !!
+}

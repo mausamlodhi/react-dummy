@@ -1,0 +1,28 @@
+export const text = {
+  chat: " Chats",
+  markAsRead: "Mark As Read",
+  unPin: "Unpin",
+  clearChat: "Clear Chat",
+  pin: "Pin",
+  unRead: "Unread",
+  pinThisChannel: "Pin This Channel",
+  unPinThisChannel: "Unpin This Channel",
+  pinText: "The Channel will be pinned for everyone who views the channel.",
+  unPinText: "This will unpin the Channel for everyone.",
+  online: "Online",
+  away: "Away",
+  busy: "Busy",
+  dnd: "Do not disturb",
+  offline: "Offline",
+  inMeeting: "In meeting",
+  pinMessageText:"The message will be pinned for everyone who views the channel.",
+  thisMessageWillBeDeletedForEveryoneInThisChat:"This message will be deleted for everyone in this chat",
+  unPinMessageText:"This will unpin the message for everyone. ",pinned:"Pinned",
+  recent:"Recent",
+  hereAreSomeThingsToGetGoing:"Here are some things to get going",
+  welcomeToTheLoopity:"Welcome to the Loopity!",
+  startChatting:"Start Chatting",
+  createLoop:"Create Loop",
+  me : "ME"
+  
+}

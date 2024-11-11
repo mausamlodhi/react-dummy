@@ -1,0 +1,15 @@
+//newLoops
+.newLoops{
+    max-width:410px;margin:0 auto;
+    h2{font-size:38px;margin-bottom:6px;line-height:48px;}
+    img{
+        margin-block:35px 40px;
+    }
+    @media (max-width: 1599px){
+        h2{font-size:28px;line-height:40px;}
+        img{
+            max-width: 260px;
+            margin-block:35px 40px;
+        }
+    }
+}

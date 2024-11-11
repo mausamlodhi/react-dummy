@@ -1,0 +1,76 @@
+&.ant-select-multiple {
+  .ant-select-selector{
+    background-color:$ant-select-bg-color;
+    border: $ant-select-border-width solid $ant-select-border-color;
+    border-radius: $ant-select-border-radius;
+    font-family: $ant-select-font-family;
+    font-size: $ant-select-font-size;
+    font-weight: $ant-select-font-weight; 
+    min-height: $ant-select-input-height;
+    padding: 0 $ant-select-padding-x 0 $ant-select-padding-x;
+    .ant-select-selection-placeholder{
+      left: $ant-select-padding-x;
+      color: $ant-select-placeholder-color;
+    }
+    .ant-select-selection-search{margin-left: 0;}
+  }
+  &:not(.ant-select-disabled){
+    &:hover{
+      .ant-select-selector {
+        border-color: $ant-select-border-color;
+      }
+    }
+  }
+  &.ant-select-focused:not(.ant-select-disabled){
+    &.ant-select:not(.ant-select-customize-input){
+      .ant-select-selector {
+        box-shadow: $ant-select-focus-box-shadow;
+        border-color: $ant-select-focus-border-color;
+        outline: none;
+      }
+    }
+  }
+}
+&.ant-select-sm{
+  &.ant-select-multiple {
+    .ant-select-selector {
+      min-height: calc($ant-select-input-height-sm + 6px);
+      font-size: $ant-select-font-size-sm;
+      padding: 0 $ant-select-padding-x-sm 0 $ant-select-padding-x-sm;
+      .ant-select-selection-placeholder{
+        left: $ant-select-padding-x-sm;
+      }
+      .ant-select-selection-item {
+        height: 26px;
+        line-height: 22px;
+        &-content{margin-right: 6px;}
+      }
+    }
+  }
+}
+&.ant-select-lg{
+  &.ant-select-multiple {
+    .ant-select-selector {
+      min-height: $ant-select-input-height-lg;
+      font-size: $ant-select-font-size-lg;
+      padding: 0 $ant-select-padding-x-lg 0 $ant-select-padding-x-lg;
+      .ant-select-selection-placeholder{
+        left: $ant-select-padding-x-lg;
+      }
+      .ant-select-selection-item {
+        height: 30px;
+        line-height: 26px;
+        &-content{margin-right: 8px;}
+      }
+    }
+  }
+}
+&.ant-select-disabled {
+  &.ant-select-multiple {
+    .ant-select-selector {
+      border-color: $ant-select-border-color;
+      background-color: rgba($ant-select-border-color, 0.3);
+      cursor: default;
+    }
+  }
+}

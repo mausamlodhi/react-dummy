@@ -1,0 +1,93 @@
+.authPage{
+    background-color: color(60);
+    min-height: 100vh;
+    &_form{
+        padding:60px 0 20px;
+        form{width:100%;}
+        &_logo{
+            margin-bottom:40px;
+            p{margin-top:25px;font-size:18px;line-height:32px;}
+        }
+        &_form{
+            max-width:540px;
+            margin: 0 auto;
+        }
+        &_head{
+            margin-bottom: 30px;
+            h1{font-size:30px;line-height:40px;color: color(800);margin-bottom:10px;white-space:nowrap;}
+            span{
+                font-size:18px;color:rgba(#3D3D3D , 0.7);
+            }
+            p{
+                font-size:18px;line-height: 24px;color: color(700);margin-top: 20px;
+                &.subhead{margin-top: 10px;color: color(580);}
+            }
+            .numberEdit{
+                font-size: 15px;line-height: 26px;color: #3B3B3B;
+                em{color: color(500);padding-right: 8px;}
+            }
+        }
+        .resend-link{color: #1592E6;}
+        
+        &_signUp{margin-top: 18px;}
+        .signupCheck{font-size: 13px;
+            .ant-checkbox{
+                transform: none;
+            }
+        }
+        &_field{padding: 50px 42px 40px;background-color: color(50);border-radius: 5px;@include box-shadow(0px, 3px, 6px, rgba(color(900), 0.16));}
+        @include media-breakpoint-down(xxl){
+            padding-top: 40px;
+            &_logo{margin-bottom: 40px;}
+            &_head{
+                h1{font-size: 35px;}
+            }
+        }
+        @include media-breakpoint-down(xl){
+            padding-top: 30px;
+            &_logo{
+                margin-bottom: 30px;
+                img{max-width: 150px;}
+            }
+            &_form{padding: 0 20px;}
+            &_head{
+                h1{font-size: 30px;}
+            }
+            &_signUp{margin-top: 25px;}
+        }
+        @include media-breakpoint-down(lg){
+            &_head{
+                margin-bottom: 20px;
+                h1{font-size: 26px;line-height: normal;}
+                p{
+                    margin: 10px 0;font-size: 15px;
+                    &.subhead{font-size: 15px; line-height: normal;margin-top: 5px;}
+                }
+            }
+            &_field{padding: 25px;}
+        }
+
+        @include media-breakpoint-down(md){
+            padding: 20px 0;
+            &_footer{font-size: 13px;}
+            &_signUp{margin-top: 20px;}
+            p{
+                font-size: 14px;
+                &.subhead{font-size: 14px;}
+            }
+        }
+        @include media-breakpoint-down(sm){
+            &_form{padding: 0 10px;max-width: 100%;}
+            &_head{
+                margin-bottom: 15px;
+                h1{font-size: 20px;}
+                span{font-size: 15px;}
+            }
+            &_signUp{margin-top: 10px;}
+            &_field{padding: 22px 18px}
+            &_logo{
+                img{max-width: 120px;}
+            }
+        }
+    }
+}

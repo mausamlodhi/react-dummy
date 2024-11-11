@@ -1,0 +1,122 @@
+.newChatModal{
+    .searchBox{
+        .form{
+            &-control{
+                border-color:transparent;
+                color: color(50);
+            }
+        }
+    }
+    .newUser{
+        max-height:220px;overflow-y:auto;
+        margin-right: -14px;
+        padding-right: 10px;
+        &_filter{
+            margin-bottom:20px;
+        }
+        &_heading{
+            color:rgba(color(550), 0.7);margin-bottom:20px;
+        }
+        &_list{
+            &:not(:last-child){margin-bottom:20px;}
+        }
+    }
+    .btn{min-width: 98px;height: 40px;}
+    &-sendfile{
+        > *{color: color(50);}
+        .modal{
+            &-content{background-color: #303030;}
+            &-header{padding-bottom: 20px;
+                .modal-title{color: color(50);}
+            }
+        }
+        .searchBox{
+            .form{
+                &-control{
+                    background-color:#474747;
+                    &::placeholder{
+                        color: rgba(color(50), 0.70);
+                    }
+                }
+                &-icon .icon-search:before{
+                    color: color(50);
+                }
+            }
+        }
+        .newUser_heading{
+            color: rgba(color(50), 0.70);
+        }
+        .userBox{margin-bottom: 20px;
+            .userAvatar span{font-size: 15px;}
+            &_content{
+                margin-left:15px;
+                h5{font-size: 20px;color:color(50);margin-bottom: 0;}
+                span{font-size: 14px;color:color(50);}
+            }
+        }
+        @include media-breakpoint-down(xxl){
+            max-width: 530px;
+            .userBox{margin-bottom: 15px;
+                &_content{
+                    h5{font-size: 16px;}
+                    span{font-size: 13px;}
+                }
+            }
+        }
+        @include media-breakpoint-down(sm){
+            .modal{
+                &-header{padding: 15px;}
+            }
+            .userBox{margin-bottom: 15px;
+                &_content{
+                    h5{font-size: 14px;}
+                    span{font-size: 12px;}
+                }
+            }
+        }
+    }
+    // modal
+    @include media-breakpoint-down(xxl){
+        .newUser{
+            &_filter{margin-bottom:15px;}
+            &_heading{margin-bottom:15px;}
+            &_list{
+                &:not(:last-child){margin-bottom:15px;}
+                .user_info{
+                    h5{font-size:16px;}
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(xl){
+        .newUser{
+            &_filter{
+                .searchBox{max-width: 100%;}
+            }
+        }
+    }
+    @include media-breakpoint-down(md){
+        .newUser{
+            max-height:180px;
+            &_list{
+                .user_info{
+                    h5{font-size:16px;}
+                }
+            }
+        }
+    }
+    // modal !!
+    @include media-breakpoint-down(sm){
+        .newUser{
+            &_filter{
+                .searchBox{display: block;position: static;margin-bottom: 0;}
+            }
+            &_list{
+                .user_info{
+                    h5{font-size:14px;}
+                }
+            }
+        }
+        .btn{min-width: 70px;height: 34px;}
+    }
+}

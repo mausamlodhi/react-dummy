@@ -1,0 +1,28 @@
+html {
+  height: 100%;
+}
+body {
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: font(rg);
+  background: color(50);
+  color: color(700);
+  min-height: 100%;
+  position: relative;
+  word-wrap: break-word!important;
+  word-break: break-word!important;
+  @include media-breakpoint-down(sm) {
+    font-size: 14px;
+  }
+}
+a,
+.btn {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    @include transition(all 0.4s);
+  }
+}
+textarea{
+  resize:none;
+}

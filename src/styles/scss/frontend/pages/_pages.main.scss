@@ -1,0 +1,18 @@
+@import 'auth.page';
+@import 'chat.page';
+@import 'loopsblank';
+@import 'pricing.page';
+@import './search.page';
+@import 'profile.page';
+@import './payment-summary.page';
+@import './subscription-billing';
+@import './new-loops';
+@import 'videocall.page';
+@import 'faq.page';
+
+.chatHead_toolsList_toggle{
+    display: none;
+    @media (max-width: 1599px) {
+        display: inline-block;
+    }
+}

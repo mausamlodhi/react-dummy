@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <g id="chat-dots" transform="translate(-2136 -780)">
+    <rect id="Frame" width="28" height="28" transform="translate(2136 780)" fill="#fff" opacity="0"/>
+    <path id="Path_6328" data-name="Path 6328" d="M2139,793.5a10.4,10.4,0,0,0,.967,4.385,2.257,2.257,0,0,1,.07,1.657l-.979,2.917a1.173,1.173,0,0,0,1.48,1.481l2.917-.979a2.255,2.255,0,0,1,1.656.07A10.494,10.494,0,1,0,2139,793.5Z" transform="translate(0.5 0.5)" fill="#fff" opacity="0.4"/>
+    <path id="Path_6329" data-name="Path 6329" d="M2148.836,793.333a1.167,1.167,0,0,1-.01-2.333h.01a1.167,1.167,0,1,1,0,2.333Zm5.833-1.167A1.166,1.166,0,0,0,2153.5,791h-.011a1.167,1.167,0,1,0,1.177,1.167Zm-9.333,0a1.166,1.166,0,0,0-1.167-1.167h-.01a1.167,1.167,0,1,0,1.177,1.167Z" transform="translate(1.166 1.833)" fill="#eff2f8"/>
+  </g>
+</svg>

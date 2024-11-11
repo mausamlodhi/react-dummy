@@ -1,0 +1,109 @@
+.subscriptionBox{
+    padding-top: 35px; 
+    .noActivePlans{
+        max-width: 575px; margin: 0 auto;
+        img{margin-bottom: 35px;}
+        h3{font-size: 22px; margin-bottom: 0;}
+        p{font-size: 14px; color: rgba(color(700), 0.7); margin: 10px 0 20px;}
+    }
+    .plansList{
+        &_box{ flex: 0  0 50%;
+            h5{font-size: 18px; margin-bottom: 0;}
+            p{font-size: 16px; margin: 8px 0 20px;}
+            &:nth-child(even){padding-left: 10px;}
+            &:nth-child(odd){padding-right: 10px;}
+            &:not(:nth-last-child(-n+2)){
+                margin-bottom: 40px;
+            }
+            .disableRenewal{h6{margin-left: 12px;}}
+            .btn{
+                &-feature{
+                    min-width: 100px;
+                }
+            }
+        }
+    }
+    .billingList{
+        &:not(:first-child){padding-top: 20px;}
+        &:not(:last-child){padding-bottom: 20px;border-bottom: 1px solid color(70);}
+        h5{font-size: 18px;margin-bottom: 20px;}
+        ul{
+            margin: -20px -30px 20px;
+            li{
+                word-break: break-word; padding-left: 30px; padding-right: 30px; padding-top: 20px;
+                span{font-size: 14px;margin-bottom: 8px;}
+                p{font-size: 16px;}
+            }
+        }
+    } 
+    @include media-breakpoint-down(xxl){
+        padding-top: 25px;
+        .noActivePlans{
+            img{margin-bottom: 20px;}
+            h3{font-size: 18px;}
+            p{margin: 10px 0 15px;}
+        }
+        .plansList{
+            &_box{
+                h5{font-size: 16px;}
+                p{font-size: 14px; margin: 5px 0 10px;}
+                &:not(:nth-last-child(-n+2)){
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        .billingList{ 
+            &:not(:first-child){padding-top: 15px;}
+            &:not(:last-child){padding-bottom: 15px;}
+            h5{font-size: 16px;margin-bottom: 15px;}
+            ul{
+                margin-bottom: 15px;
+                li{
+                    p{font-size: 15px;}
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(xl){
+        padding-top: 15px;
+        .noActivePlans{
+            img{margin-bottom: 10px; max-width: 180px;}
+            h3{font-size: 16px;}
+        }
+        .plansList{
+            ul{margin-top: -20px;}
+            &_box{ 
+                flex: 0  0 100%; padding-top: 20px;
+                h5{font-size: 15px;}
+                &:nth-child(even){padding-left: 0;}
+                &:nth-child(odd){padding-right: 0;}
+                &:not(:nth-last-child(-n+2)){
+                    margin-bottom: 0;
+                }
+                .btn{
+                    &-feature{
+                        min-width: auto;
+                    }
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(lg){
+        .billingList{ 
+            h5{margin-bottom: 10px;}
+            ul{ 
+                 margin: -15px -15px 10px;
+                 li{padding-left: 15px; padding-right: 15px; padding-top: 15px;}
+            }
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        .billingList{ 
+            ul{ 
+                li{
+                    &:not(:last-child){flex-basis: 50%;} 
+                }
+            }
+        }
+    }
+}

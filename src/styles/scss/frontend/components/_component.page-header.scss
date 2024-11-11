@@ -1,0 +1,66 @@
+.pageHeader{
+    padding: 24px 24px 30px;
+    &_head{
+        margin-bottom: 25px;
+        &_title{
+            font-size: 24px;
+            &-sm{font-size: 20px;}
+        }
+        .backIcon{
+            font-size: 20px; width: 40px; height: 40px; padding: 5px; display: flex; justify-content: center; align-items: center; color: color(700); border: 1px solid color(70); background: color(50);
+            &:hover{color: color(500);}
+        }
+        .searchBox{
+            margin-right: 15px;
+            max-width: 300px;
+            .form-group{
+                .form-icon{width: 40px !important;}
+                .form-control{height: 40px; padding-left: 40px !important;}
+            }
+        }
+        .btn{height: 40px; line-height: 40px;}
+        .icon-left{display: none !important;}
+        .icon-fill-add-user{
+            .path1, .path2{
+                &:before{color: color(50);}
+            }
+        }
+    }
+    @media (max-width: 1599px) {
+        padding: 15px 20px;
+    }
+    @include media-breakpoint-down(xxl){
+        padding: 15px;
+        &_head{
+            margin-bottom: 20px;
+            &_title{
+                font-size: 20px;
+                &-sm{font-size: 18px;}
+            }
+            .backIcon{
+                font-size: 16px; width: 30px; height: 30px; 
+            }
+        }
+    }
+    @include media-breakpoint-down(xl){
+        padding: 12px;
+        &_head{
+            margin-bottom: 15px;
+            &_title{
+                font-size: 18px;
+                &-sm{font-size: 16px;}
+            }
+        }
+    }
+    @include media-breakpoint-down(md){
+        &_head{
+            .btn{
+                min-width: 40px;
+                .icon-left{
+                    display: inherit !important; margin: 0;
+                }
+                span{display: none;}
+            }
+        }
+    }
+}

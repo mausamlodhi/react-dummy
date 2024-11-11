@@ -1,0 +1,116 @@
+.mainHeader{
+    .navbar {
+        padding: 15px 38px;
+        background-color: color(60);
+        border-bottom: 1px solid rgba(color(900), 0.10);
+        &-brand{
+            padding: 0;
+        }
+        &-fixed{
+            background-color: color(550);
+        }
+        &-inner{
+            background-color: color(550);
+        }
+        .nav-link{
+            padding: 0; color: color(700); line-height: 28px;
+            margin: 0 25px; position: relative;font-size: 20px;
+            &:hover {
+                color: color(500);
+            }
+            &.active{
+                font-family: font(sb); color: color(450);
+                // &::after{
+                //     content: '';
+                //     position: absolute;
+                //     left: 0; right: 0; bottom: 0;
+                //     width: 100%; height: 2px; border-radius: 2px;
+                //     background: rgb(25,209,197);
+                //     background: -moz-linear-gradient(300deg, rgba(25,209,197,1) 0%, rgba(57,246,129,1) 100%);
+                //     background: -webkit-linear-gradient(300deg, rgba(25,209,197,1) 0%, rgba(57,246,129,1) 100%);
+                //     background: linear-gradient(300deg, rgba(25,209,197,1) 0%, rgba(57,246,129,1) 100%);
+                //     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#19d1c5",endColorstr="#39f681",GradientType=1);
+                // }
+            }
+
+        }
+        .dropdown {
+            &.loginBtn {
+                .dropdown-toggle { 
+                    width:30px; height:30px; font-size: 30px; background-color:transparent; padding: 0;
+                    &:active{background-color: transparent;}
+                    &::after{display: none;}
+                }
+            }
+            &.profile{
+                span{margin-right: 10px;color: color(700);}
+            }
+            &-menu {
+                border:0; border-radius: 0; padding-block: 10px; min-width: 238px;
+                margin-top: 22px;
+                @include box-shadow(0, 3px, 20px, rgba(color(900), 0.1));
+            }
+            &-divider{
+                margin: 10px 0;
+                border-color: #EBEBEB;
+            }
+            &-item{
+                color: color(650); padding: 10px 30px; 
+                &:hover{
+                    background-color: transparent;
+                    color: color(500);
+                }
+            }
+            &-toggle{
+                font-size: 16px; color: color(50); padding-right: 10px; @include align-items(center);
+                &::after{
+                    content:'\e97b';
+                    position:absolute; 
+                    right:0; border:0;
+                    font-size:10px;
+                    font-family:'icomoon';
+                    color: color(700);
+                }
+            }
+            .profileImg{
+                width: 40px; height: 40px; border: 1px solid color(50);
+                margin-right: 10px; border-radius: 40px; overflow: hidden;
+                img {
+                    width: 100%; height: 100%; object-fit: cover;
+                }
+            }
+            &.notify{
+                .dropdown-toggle {
+                    width: 30px;
+                    height: 30px;
+                    font-size: 22px;
+                    &::after{display: none;}
+                    .badge{
+                        background-color: color(500); font-size: 12px; font-weight: 400; top: -5px; padding: 3px 6px;
+                        right: -5px;
+                    }
+                }
+                .dropdown-menu{
+                    min-width: 450px; margin-top: 26px; padding: 0;
+                }
+                .notify_list{
+                    max-height: 350px;
+                    &_item{
+                        a {
+                            padding: 10px 15px; transition: all 0.4s ease-in-out;
+                            &.noRead{background: color(80);}
+                            img{width: 45px; height: 45px; border-radius: 50%; object-fit: cover;}
+                            p{color: color(650); font-size: 16px;}
+                            span{color:color(600); font-size: 12px;}
+                            &:hover{background: color(80);}
+                        }
+                    }
+                }
+                .viewAll {
+                    border-top: 1px solid #ddd;
+                    padding: 15px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,111 @@
+$ant-picker-border-color:          $input-border-color !default;
+$ant-picker-focus-border-color:    $input-focus-border-color !default;
+$ant-picker-icon-color:                 $base-400 !default;
+
+$ant-picker-font-size:             $input-font-size !default;
+$ant-picker-font-size-sm:          $input-font-size-sm !default;
+$ant-picker-font-size-lg:          $input-font-size-lg !default;
+$ant-picker-font-size-xl:          $input-font-size-xl !default;
+
+$ant-picker-today-bg:              $accent-200;
+$ant-picker-today-color:           $accent-color;
+
+$ant-picker-hover-bg: $accent-color;
+$ant-picker-hover-color: $white;
+
+$ant-picker-active-hover-color: $accent-color;
+
+$ant-picker-selected-bg: $accent-500;
+$ant-picker-selected-color: $white;
+
+.ant-picker{
+    &:hover{
+        border-color: $ant-picker-border-color;
+    }
+    &-focused,&-focused:hover{
+        border-color: $ant-picker-focus-border-color;
+    }
+    .ant-picker-input{
+        input{
+            line-height: initial;
+            font-size: $ant-picker-font-size;
+            &::placeholder {
+                color: $input-placeholder-color;
+            }
+        }
+    }
+    &.ant-picker-large {
+        .ant-picker-input{
+            input{font-size: $ant-picker-font-size-lg;}
+        }
+    }
+    &.ant-picker-small {
+        .ant-picker-input{
+            input{font-size: $ant-picker-font-size-sm;}
+        }
+    }
+
+    &-cell-in-view{
+        .ant-picker-cell-inner{
+            
+        }
+        &.ant-picker-cell-today{
+            .ant-picker-cell-inner{
+                background-color: $ant-picker-today-bg;
+                color: $ant-picker-today-color;
+                &:before{content: none !important;}
+            }
+        }
+        &.ant-picker-cell-selected{
+            .ant-picker-cell-inner{
+                background-color: $ant-picker-selected-bg !important;
+                color: $base-500 !important;
+                &:before{content: none !important;}
+            }
+        }
+    }
+    &-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):not(.ant-picker-cell-range-hover-start):not(.ant-picker-cell-range-hover-end) .ant-picker-cell-inner{
+        background-color: $accent-200 !important;
+        // color: $ant-picker-selected-color;
+    }
+    &-header-view{
+        button{
+            &:hover{
+                color: $ant-picker-active-hover-color;
+            }
+        }
+    }
+    &-footer{
+        .ant-picker-today-btn{
+            color: $ant-picker-active-hover-color;
+        }
+    }
+    &-suffix {
+        font-size: 15px;
+        color: $ant-picker-icon-color;
+    }
+
+    /* Time Picker*/
+    &-time-panel-column{
+        .ant-picker-time-panel-cell{
+            &.ant-picker-time-panel-cell-selected{
+                .ant-picker-time-panel-cell-inner{
+                    background-color: $ant-picker-today-bg;
+                }
+            }
+            .ant-picker-time-panel-cell-inner{
+               &:hover{
+                background-color: $ant-picker-today-bg !important;
+               }
+            }
+        }
+    }
+    &-dropdown{
+        .ant-btn-primary{
+            &:not(:disabled){
+                background-color: $accent-color;
+                border-color: $accent-color;
+            }
+        }
+    }
+}

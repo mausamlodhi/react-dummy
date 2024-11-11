@@ -1,0 +1,284 @@
+.audioCall{
+    width: 430px;
+    background: #1F1F1F;
+    padding: 25px;
+    &_time{
+        padding-top: 80px;
+        h2{
+            font-size: 24px;
+            line-height: 1.79;
+            color: rgba(color(50), 0.70);
+            margin-bottom: 24px;
+        }
+        p{
+            font-size: 20px;
+            color: rgba(color(50), 0.70);
+        }
+    }
+    &_member{
+        // height: 100%;
+        overflow-y: auto;
+        ul{
+            // margin: 0 -34px;
+            justify-content: center;
+            li{
+                width: 50%;
+                padding: 0 17px;
+                text-align: center;
+                margin-bottom: 20px;
+                img{border-radius: 5px;width: 100%;height: auto;}
+                &.active{
+                    img{
+                        border: 4px solid color(500);
+                        border-radius: 5px;
+                    }
+                }
+                h2{margin-top: 18px;color: color(50);font-size: 18px;font-family: font(sb);}
+            }
+        }
+    }
+    &_control{
+        background-color: #303030;
+        border-radius: 10px;
+        
+        margin-top: 20px;
+        ul{
+            li{
+                span[class*="icon-"]{
+                    font-size: 27px;
+                }
+                &:not(:last-child){
+                    margin-right: 30px;
+                }
+                &.callClose{
+                    width: 88px;
+                    a{
+                        padding: 11px;
+                        border-radius: 7px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: rgba(#D13438, 0.71);
+                        .icon-phone:before{
+                            color: rgba(color(50), 0.71);
+                        }
+                    }
+                }
+                .volumeSlider{
+                    &_side{
+                        position:absolute;left:-30%;top:-50px;
+                        @include translate(-30%, 0%);
+                    }
+                }
+            }
+        }
+        &_space{
+            padding: 17px 32px;
+            // width: 370px;
+        }
+    }
+    &_addmember{
+        .dropdown{
+            position: inherit!important;
+        }
+        .dropdown-toggle{
+            &::after{display: none;}
+        }
+        &_head{
+            margin-bottom: 15px;
+            h3{font-size: 18px;color: color(50);font-family: font(sb);}
+            .icon-close{
+                padding: 8px;
+                background-color: color(80);
+                font-size: 14px!important;
+                border-radius: 50%;
+            }
+        }
+        .dropdown-menu{
+            width: 100%;
+            transform: translate(0px, -95px)!important;
+            padding: 20px 15px;
+            background-color: color(700);
+        }
+        .dropdown-item{
+            padding: 0;
+            &:not(:last-child){margin-bottom: 5px;}
+            padding: 5px;
+            border-radius: 4px;
+            &:hover{
+                background-color: rgba(color(50), 0.15);
+            }
+            .user_info{
+                h6{color: color(50);font-family: font(rg);}
+            }
+        }
+    }
+    &_memberList{
+        max-height: 270px;
+        height: auto;
+        overflow-y: auto;
+    }
+    .closeBtn{
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #E8ECF1;
+        border-radius: 50%;
+        position: absolute;
+        right: 22px;
+        top: 20px;
+        margin-left: 15px;
+        em{
+            font-size: 13px;
+            color: color(580);
+        }
+    }
+    @include media-breakpoint-down(xxl){
+        padding: 20px;
+        width: 360px;
+        position: absolute !important;
+        right: 0;
+        height: 100% !important;
+        z-index: 1034;
+        top: 0;
+        display: none;
+        &-open{display: block;}
+        &_time{
+            padding-top: 25px;
+            h2{font-size: 20px;line-height: 1.35;margin-bottom: 15px;}
+        }
+        &_member{
+            ul{
+                li{
+                    margin-bottom: 15px;
+                    h2{margin-top: 12px;font-size: 15px;}
+                }
+            }
+        }
+        &_control{
+            // padding: 15px 25px;
+            ul{
+                li{
+                    span[class*="icon-"]{font-size: 22px;}
+                    &.callClose{
+                        width: 75px;
+                        a{padding: 8px;}
+                    }
+                }
+            }
+            &_space{padding: 15px 25px;}
+        }
+        &_addmember{
+            .dropdown-menu{
+                transform: translate(0px, -75px)!important;
+                padding: 15px;
+                .dropdown-item{
+                    .user_info{
+                        h6{font-size: 15px;}
+                    }
+                }
+            }
+            &_head{
+                margin-bottom: 10px;
+                h3{font-size: 17px;}
+                .icon-close{
+                    padding: 6px;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(xl){
+        &_time{
+            padding-top: 10px;
+            p{font-size: 18px;}
+        }
+        &_member{
+            ul{
+                li{
+                    padding: 0 10px;
+                }
+            }
+        }
+        &_control{
+            margin-top: 15px;
+        }
+    }
+    @include media-breakpoint-down(lg){
+        width: 300px;
+        padding: 15px;
+        position: fixed !important;
+        .closeBtn {
+            right: 8px;
+            top: 8px;
+        }
+        &_member{
+            ul{
+                li{
+                    width: 33.33%;
+                    padding: 0 6px;
+                }
+            }
+        }
+        &_addmember{
+            .dropdown-menu{
+                // transform: translate(0px, -75px)!important;
+                padding: 15px 12px;
+                .dropdown-item{
+                    margin-bottom: 2px;
+                    .user_info{
+                        h6{font-size: 14px;}
+                    }
+                }
+            }
+            &_head{
+                h3{font-size: 16px;}
+                .icon-close{
+                    padding: 6px;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(md){
+        &_time{
+            padding-top: 10px;
+        }
+        &_control{
+            ul{
+                li{
+                    span[class*="icon-"]{font-size: 20px;}
+                }
+            }
+            &_space{padding: 12px 20px;}
+        }
+        &_addmember{
+            .dropdown-menu{
+                transform: translate(0px, -66px)!important;
+                padding: 12px 10px;
+            }
+            &_head{
+                padding: 0 5px;
+            }
+        }
+    }
+    @include media-breakpoint-down(sm){
+        &_time{
+            padding-top: 0;
+            h2{font-size: 18px;margin-bottom: 5px;}
+            p{font-size: 16px;}
+        }
+        .closeBtn{
+            width: 27px;
+            height: 27px;
+            right: 15px;
+            top: 15px;
+            em{font-size: 11px;}
+        }
+    }
+    @media (max-width: 460px){
+        
+    }
+}

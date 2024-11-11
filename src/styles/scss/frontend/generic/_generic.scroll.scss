@@ -1,0 +1,27 @@
+:focus {
+    outline: 0 !important;
+}
+::-moz-selection {
+    color: color(50);
+    background: color(500);
+}
+  
+::selection {
+    color: color(50);
+    background: color(500);
+}
+
+::-webkit-scrollbar {
+    width: 6px;height: 6px;
+    @include media-breakpoint-down(lg) {
+        width: 4px;height: 4px;
+    }
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: none; background-color: #e2e5e6;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: none; background-color: color(500);
+}

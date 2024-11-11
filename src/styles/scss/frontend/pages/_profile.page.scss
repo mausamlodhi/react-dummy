@@ -1,0 +1,304 @@
+.myProfile {
+  &_left {
+    background-color: color(50);
+    padding: 50px 30px;
+    border-radius: 10px;
+    height: 100%;
+    .nav {
+      &-link {
+        color: color(700);
+        opacity: 0.7;
+        font-size: 18px;
+        font-family: font(rg);
+        @include transition(all 0.4s);
+        display: flex;
+        align-items: center;
+        padding: 0;
+        &.active {
+          background-color: transparent;
+          color: color(700);
+          opacity: 1;
+          font-family: font(bd);
+          @include transition(all 0.4s);
+        }
+        span {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          padding: 10px;
+          font-size: 20px;
+          background-color: rgba($color: color(550), $alpha: 0.05);
+          margin-right: 15px;
+          @include transition(all 0.4s);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      &-item {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  &_right {
+    background-color: color(50);
+    padding: 45px;
+    border-radius: 10px;
+    .head {
+      border-bottom: 1px solid rgba($color: #cccccc, $alpha: 0.4);
+      padding-bottom: 20px;
+    }
+    .title {
+      font-size: 22px;
+      font-family: font(bd);
+    }
+    .profileForm {
+      margin-top: 40px;
+    }
+    .borderSec {
+      border-bottom: 1px solid rgba($color: #cccccc, $alpha: 0.4);
+      margin: 40px 0;
+    }
+    .changeLink {
+      color: color(500);
+      font-size: 14px;
+      margin-top: 10px;
+      display: inline-block;
+      font-family: font(sb);
+      text-decoration: underline;
+    }
+    .proileBtn {
+      margin-top: 10px;
+    }
+  }
+  &_profile {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #f0f1f1;
+    margin-bottom: 30px;
+    img {
+      width: 108px;
+      height: 108px;
+      border-radius: 50%;
+      border: 2px solid color(50);
+      object-fit: cover;
+      @include box-shadow(0px, 8px, 10px, rgba(color(500), 0.3));
+    }
+    .uploadPhoto {
+      width: fit-content;
+      margin: 0 auto;
+      &_icon {
+        background-color: color(550);
+        border: 2px solid color(50);
+        border-radius: 50%;
+        width: 33px;
+        height: 33px;
+        bottom: 0;
+        right: 0;
+        cursor: pointer;
+        input {
+          position: absolute;
+          opacity: 0;
+          z-index: -1;
+          visibility: hidden;
+        }
+        span {
+          font-size: 14px;
+        }
+      }
+      .ant-upload {
+        border: 0 !important;
+        border-radius: 50% !important;
+      }
+    }
+    h1 {
+      font-size: 20px;
+      font-family: font(bd);
+      color: #002333;
+      margin: 15px 0 5px;
+    }
+    p {
+      font-size: 14px;
+      color: #707277;
+    }
+  }
+  .icon-notverified {
+    color: #b7b7b7;
+  }
+  .verified {
+    color: color(500);
+  }
+  @include media-breakpoint-down(xxl) {
+    &_left {
+      padding: 30px 20px;
+      .nav {
+        &-item {
+          &:not(:last-child) {
+            margin-bottom: 15px;
+          }
+        }
+        &-link {
+          font-size: 16px;
+          span {
+            width: 35px;
+            height: 35px;
+            padding: 8px;
+            font-size: 18px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    &_profile {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      h1 {
+        font-size: 18px;
+      }
+      img {
+        width: 95px;
+        height: 95px;
+      }
+    }
+    &_right {
+      padding: 30px;
+      .head {
+        padding-bottom: 15px;
+      }
+      .title {
+        font-size: 20px;
+      }
+      .profileForm {
+        margin-top: 30px;
+      }
+      .borderSec {
+        margin: 30px 0;
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &_left {
+      transition: 0.3s ease-in-out;
+      position: fixed !important;
+      z-index: 9999;
+      top: 0px;
+      left: -100%;
+      padding: 15px;
+      border-radius: 0;
+      overflow: auto;
+      max-width: 300px;
+      width: 100%;
+      @include box-shadow(0px, 5px, 30px, rgba(color(900), 0.1));
+      &.sidebarOpen {
+        left: 0px;
+        transition: 0.3s ease-in-out;
+      }
+      .closeIcon {
+        position: absolute;
+        right: 12px;
+        em {
+          font-size: 15px;
+        }
+      }
+      .nav {
+        &-item {
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    &_right {
+      padding: 20px;
+      .profileForm {
+        margin-top: 20px;
+      }
+      .proileBtn {
+        margin-top: 0;
+      }
+      .borderSec {
+        margin: 20px 0;
+      }
+      .toggleIcon {
+        em {
+          color: color(50);
+          background-color: color(500);
+          font-size: 18px;
+          padding: 6px;
+          border-radius: 4px;
+        }
+      }
+    }
+    &_profile {
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      img {
+        width: 80px;
+        height: 80px;
+      }
+      h1 {
+        font-size: 16px;
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &_right {
+      padding: 15px;
+      .title {
+        font-size: 18px;
+      }
+      .head {
+        padding-bottom: 10px;
+      }
+      .profileForm {
+        margin-top: 10px;
+      }
+      .toggleIcon {
+        em {
+          font-size: 18px;
+        }
+      }
+      .borderSec {
+        margin: 15px 0;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &_right {
+      .title {
+        font-size: 16px;
+      }
+      .toggleIcon {
+        em {
+          font-size: 16px;
+        }
+      }
+    }
+    &_left {
+      max-width: 250px;
+      .nav {
+        &-item {
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+        }
+        &-link {
+          font-size: 15px;
+          span {
+            width: 28px;
+            height: 28px;
+            padding: 4px;
+            font-size: 15px;
+            margin-right: 8px;
+          }
+        }
+      }
+      .closeIcon {
+        em {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

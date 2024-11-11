@@ -1,0 +1,50 @@
+export const text = {
+  loginTitle: "Login",
+  email: "Email",
+  emailPlaceholder: "Enter your email address",
+  password: "Password",
+  passwordPlaceholder: "Enter your password",
+  rememberMe: "Remember Me",
+  forgotPasswordLink: "Forgot Password?",
+  adminWelcome: "Welcome,",
+  adminLoginDescription:
+    "Access the Daakia panel using your email and password.",
+  submit: "Sign In",
+  signin: "Sign-In",
+  send: "Send",
+  forgotPasswordTitle:
+    "If you forgot your password, well, then we’ll email you instructions to reset your password.",
+  backToSignIn: "Back to Sign In",
+  title: "Reset Password",
+  resetDescription: "Create your new password.",
+  newPassword: "New Password",
+  newPasswordPlaceholder: "Enter new password",
+  confirmPasswordPlaceholder: "Confirm new password",
+  confirmPassword: "Confirm New Password",
+  passwordContains: "Password contains",
+  reset: "Reset",
+  passwordContain: "Password contains:",
+  letter: "At least 1 Capital  Letter.",
+  number: "At least 1 Special  Character & 1 Number.",
+  long: "6-12 characters long.",
+  description: "Set a unique password to protect your account.",
+
+  oldPassword: "Old Password",
+
+  currentPlaceholder: "Enter current password",
+  newPlaceholder: "Enter New Password",
+  confirmPlaceholder: "Confirm New Password",
+
+  capitalLetter: "At least 1 Capital Letter & 1 Small Letter",
+  specialCharacterNumber: "At least 1 Special Character & 1 Number.",
+  characterLength: "6-15 Character long.",
+  updatePassword: "Update Password",
+  // submit: "Update Password",
+  confirmNewPassword: "Confirm New Password",
+  changePassword: "Change Password",
+  verifyCodeMessage:
+    "Please enter the verification code received on your email..",
+  resendCode: "Resend Code",
+  signInPageParagraph:
+    "Access the loopity panel using your email and password.",
+};

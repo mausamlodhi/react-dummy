@@ -1,0 +1,44 @@
+.commonTabs{
+    .nav{
+        &-item{
+            .nav-link{
+                font-size: 18px; color: rgba(color(700), 0.7); border: none; border-bottom: 2px solid transparent; line-height: 0.75;
+                padding: 8px 8px;
+                &:hover{color: color(500);  border-color: color(500);}
+                &.active{color: color(500); font-family: font(bd); border-color: color(500); background: transparent;}
+            }
+            &:not(:last-child){margin-right: 22px;}
+        }
+    }
+    @media (max-width: 1599px) {
+        .nav{
+            &-item{
+                .nav-link{
+                    font-size: 16px;
+                }
+                &:not(:last-child){margin-right: 16px;}
+            }
+        }
+    }
+    @include media-breakpoint-down(xxl){
+        .nav{
+            &-item{
+                .nav-link{
+                    font-size: 15px; padding: 5px;
+                }
+                &:not(:last-child){margin-right: 10px;}
+            }
+        }
+    }
+    @include media-breakpoint-down(xl){
+        .nav{
+            flex-wrap: nowrap;
+            overflow: auto;
+            &-item{
+                .nav-link{
+                    font-size: 14px; white-space: nowrap; margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

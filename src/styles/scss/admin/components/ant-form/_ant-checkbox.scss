@@ -1,0 +1,49 @@
+$ant-checkbox-bg-active : $form-check-input-checked-bg-color;
+$ant-checkbox-border-active : $ant-checkbox-bg-active;
+.ant-checkbox{
+    &-wrapper{
+        &:hover:not(.ant-checkbox-disabled){
+            .ant-checkbox-inner{
+                // background-color: $ant-checkbox-bg-active;
+                border-color: $ant-checkbox-border-active;
+            }
+            .ant-checkbox-checked:not(.ant-checkbox-disabled){
+                .ant-checkbox-inner{
+                    background-color: $ant-checkbox-bg-active;
+                    border-color: $ant-checkbox-border-active;
+                }
+                &:after{
+                    border-color: $ant-checkbox-border-active;
+                }
+            }
+        }
+    }
+    .ant-checkbox-inner{
+        width: 18px;
+        height: 18px;
+    }
+    &-input{
+        &:focus{
+            &+.ant-checkbox-inner{
+                border-color: $ant-checkbox-border-active;
+            }
+        }
+    }
+    &-checked{
+        &:not(.ant-checkbox-disabled){
+            &:hover{
+                .ant-checkbox-inner{
+                    background-color: $ant-checkbox-bg-active;
+                    border-color: $ant-checkbox-border-active;
+                }
+            }
+        }
+        &:after{
+            border-color: $ant-checkbox-border-active !important; 
+        }
+        .ant-checkbox-inner{ 
+            background-color: $ant-checkbox-bg-active !important;
+            border-color: $ant-checkbox-border-active !important;
+        }
+    }
+}

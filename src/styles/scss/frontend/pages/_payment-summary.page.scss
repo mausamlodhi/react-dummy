@@ -1,0 +1,270 @@
+.customCard{
+    background: color(50); border-radius: 5px; border: 1px solid #eee; padding: 40px;
+    @include media-breakpoint-down(xxl){
+        padding: 30px;
+    } 
+    @include media-breakpoint-down(lg){
+        padding: 20px;
+    } 
+    @include media-breakpoint-down(sm){
+        padding: 15px;
+    } 
+}
+.paymentMode{
+    .row{
+        .col-lg{
+            &-3{width: 355px;}
+            &-9{width: calc(100% - 355px);}
+        }
+        @include media-breakpoint-down(xl){
+            .col-lg{
+                &-3{width: 300px;}
+                &-9{width: calc(100% - 300px);}
+            }
+        }
+        @include media-breakpoint-down(lg){
+            .col-lg{
+                &-3{width: 100%;}
+                &-9{width: 100%;}
+            }
+        }
+    }
+    &_tab{
+        .nav{
+            &-item{
+                .nav-link{
+                    font-size: 18px; color: color(700); padding: 23px 27px;
+                    span{font-size: 20px; margin-right: 15px;}
+                    &.active{
+                        background-color: transparent !important; font-family: font(bd);
+                    }
+                }
+                &:not(:last-child){
+                    border-bottom: 1px solid color(70);
+                }
+            }
+        }
+    }
+    &_cnt{
+        &_details{max-width: 550px;}
+        h3{font-size: 22px;margin-bottom: 20px;color: color(700);}
+        .paymentSec{
+            margin: 30px 0 30px 30px;
+            &_card{
+                &:not(:last-child){margin-right: 50px; margin-bottom: 15px;}
+                    p{font-size: 16px; color: rgba(color(700), 0.7);}
+                    a{margin-left: 25px;font-size: 16px;color: color(550);}
+            }
+        }
+        .cardPayment{
+            max-width: 520px;
+            .btn{margin-top: 30px;}
+        }
+        .ant-radio-group{
+            margin: 0;
+            li{ margin-bottom: 5px;
+                &:not(:last-child){margin-right: 40px;}
+                span{font-size: 18px;font-family: font(sb);color: color(700);}
+            }
+        }
+        .affirmative{
+            margin-top: 35px; margin-bottom: 20px;
+            p{
+                font-size: 14px; color: rgba(color(700), 0.7);
+                margin-top: 15px; margin-bottom: 0;
+                span{color: color(700);}
+            }
+        }
+        textarea{
+            min-height: 90px; background-color: #F5F5F5;
+        }
+        .ant-form-item{
+            margin-bottom: 0;
+        }
+    }
+    &_right{
+        width: 350px;
+        padding-left: 20px;
+        flex-shrink: 0;
+        .paymentBox{
+            background: color(60);
+            padding: 25px;
+            border-radius: 5px;
+            h5{font-size: 24px; margin-bottom: 3px;}
+            > p{color: rgba(color(700), 0.7);}
+            &_summary{
+                margin: 30px 0 25px;
+                li{
+                    padding: 9px 0;
+                    &:first-child{padding-top: 0;}
+                    display: flex; justify-content: space-between; font-size: 16px; align-items: center;
+                    span{font-size: 16px; flex-shrink: 0; text-align: right; font-family: font(sb);}
+                    &.totalPayment{
+                        margin-top: 9px;
+                        border-top: 1px solid #DFE4EC;
+                        padding-top: 20px;
+                    }
+                }
+            }
+            &_action{margin-top: 35px;}
+            &_infoIcon{font-size: 16px; color: color(550); cursor: pointer;}
+        }
+    }
+    @include media-breakpoint-down(xxl){
+        &_tab{
+            .nav{
+                &-item{
+                    .nav-link{
+                        font-size: 16px; padding: 18px 20px;
+                        span{font-size: 18px; margin-right: 10px;}
+                    }
+                }
+            }
+        }
+        &_cnt{
+            h3{font-size: 20px;margin-bottom: 20px;}
+            .paymentSec{
+                margin:20px 0 20px 20px;
+                &_card{
+                    &:not(:last-child){margin-right: 35px;}
+                    p{font-size: 14px;}
+                    h6{font-size: 14px;}
+                    a{margin-left: 20px;}
+                }
+            }
+            .ant-radio-group{
+                li{
+                    &:not(:last-child){margin-right: 20px;}
+                    span{font-size: 16px;}
+                }
+            }
+            .affirmative{margin: 20px 0;}
+        }
+        &_right{
+            width: 320px;
+            .paymentBox{
+                h5 {font-size: 20px;}
+                &_summary{
+                    margin: 20px 0;
+                    li{
+                        padding: 7px 0; font-size: 15px;
+                        span{font-size: 14px;}
+                        &.totalPayment{
+                            margin-top: 3px;
+                            padding-top: 10px;
+                        }
+                    }
+                }
+                &_action{margin-top: 25px;}
+            }
+        }
+    }
+    @include media-breakpoint-down(xl){
+        &_cnt{
+            // &_details{max-width: 100%;}
+            h3{font-size: 18px;margin-bottom: 15px;}
+            .paymentSec{
+                &_card{
+                    &:not(:last-child){margin-right: 25px;}
+                }
+            }
+            .cardPayment{
+                .btn{margin-top: 20px;}
+            }
+            .ant-radio-group{
+                li{
+                    span{font-size: 14px;}
+                }
+            }
+            .affirmative{ margin: 15px 0;
+                p{
+                    margin-top: 10px;
+                }
+            }
+            .internetBanking{
+                &_select{
+                    margin-bottom: 15px;
+                    .txt{font-size: 15px;}
+                }
+            }
+        }
+        &_right{
+            .paymentBox{
+                padding: 15px;
+                h5 {font-size: 18px;}
+                &_summary{
+                    margin: 15px 0;
+                }
+                &_action{margin-top: 20px;}
+            }
+        }
+    }
+    @include media-breakpoint-down(lg){
+        &_tab{
+            margin-bottom: 10px;
+            .nav{
+                &-item{
+                    .nav-link{
+                        font-size: 15px; padding: 15px;
+                    }
+                }
+            }
+        }
+        &_cnt{
+            &_details{max-width: 100%;}
+            textarea{
+                min-height: 70px;
+            }
+        }
+        &_right{
+            width: 100%;
+            padding-left: 0;
+            margin-top: 20px;
+        }
+    }
+    @include media-breakpoint-down(sm){
+        &_tab{
+            .nav{
+                &-item{
+                    .nav-link{
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+        &_cnt{
+            padding: 15px;
+            h3{font-size: 16px;margin-bottom: 10px;}
+            .paymentSec{
+                &_card{
+                    &:not(:last-child){margin-right: 0;}
+                    width: 100%;
+                }
+            }
+            .cardPayment{
+                .btn{margin-top: 15px;}
+            }
+            .ant-radio-group{
+                li{
+                    &:not(:last-child){
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .affirmative{ margin: 10px 0;
+                p{
+                    margin-top: 5px;
+                }
+            }
+        }
+        &_right{
+            margin-top: 15px;
+            .paymentBox{
+                &_summary{
+                    margin: 5px 0 10px;
+                    li{padding: 5px 0; font-size: 14px;}
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,162 @@
+.faqPage{
+    background-color: color(60);
+    &_head{
+        margin-bottom: 30px;
+        h1{font-size: 40px;font-family: font(sb);}
+    }
+
+    .accordion{
+        &-item{
+            border: 0;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            @include box-shadow(0px, 6px, 30px, rgba(color(900), 0.06));
+        }
+        &-button{
+            border-radius: 8px!important;
+            padding: 32px 100px 32px 50px;
+            font-size: 24px;
+            font-family: font(bd);
+            background-color: color(50);
+            align-items: start;
+            &:not(.collapsed){
+                color: color(700);
+                background-color: color(50);
+                box-shadow: none;
+                &:after{
+                    background-color: color(600);
+                    color: color(700);
+                    padding-top: 0;
+                    transform: translateY(-50%) rotate(180deg);
+                }
+            }
+            &:focus{box-shadow: none;}
+            span{margin-right: 20px;}
+            &:after{
+                position: absolute;
+                right: 50px;
+                width: 50px;
+                height: 50px;
+                background-color: rgba(#E8ECF1, 0.55);
+                border-radius: 50%;
+                content: '\e97b';
+                font-size: 19px;
+                line-height: 19px;
+                padding-top: 3px;
+                font-family: "icomoon";
+                background-image: none;
+                @include flexcenter(both);
+                color: color(580);
+                border: 1px solid rgba(#E3E3E3, 0.55);
+                @include absolutecenter(y);
+                @include transition(all 0.3s);
+            }
+        }
+        &-body{
+            font-size: 18px;
+            line-height: 24px;
+            padding: 0 130px 33px 90px;
+        }
+    }
+
+    @media (max-width: 1599px){
+        &_head{
+            margin-bottom: 20px;
+            h1{font-size: 34px;}
+        }
+        .accordion{
+            &-button{
+                padding: 24px 77px 24px 35px;
+                font-size: 22px;
+                &:after{
+                    width: 42px;height: 42px;font-size: 16px;right: 35px;
+                }
+            }
+            &-body{
+                padding: 0 130px 33px 72px;
+            }
+        }
+    }   
+    @include media-breakpoint-down(xxl){
+        &_head{
+            margin-bottom: 15px;
+            h1{font-size: 28px;line-height: normal;}
+        }
+        .accordion{
+            &-button{
+                padding: 20px 62px 20px 30px;
+                font-size: 20px;
+                &:after{right: 20px;}
+                span{margin-right: 15px;}
+            }
+            &-body{
+                padding: 0 80px 25px 60px;
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+    }
+    @include media-breakpoint-down(xl){
+        padding-block: 35px 40px;
+        &_head{
+            h1{font-size: 24px;}
+        }
+        .accordion{
+            &-button{
+                font-size: 18px;
+                &:after{width: 36px;height: 36px;font-size: 14px;}
+            }
+        }
+    }
+    @include media-breakpoint-down(lg){
+        &_head{
+            margin-bottom: 10px;
+            h1{font-size: 22px;}
+        }
+        .accordion{
+            &-button{
+                font-size: 18px;
+                // padding: 15px 20px;
+            }
+            &-body{
+                padding: 0 50px 25px 50px;
+            }
+        }
+    }
+    @include media-breakpoint-down(md){
+        padding-block: 25px 30px;
+        .accordion{
+            &-button{
+                font-size: 17px;padding: 17px 50px 17px 15px;
+                &:after{right: 15px;}
+            }
+        }
+    }
+    @include media-breakpoint-down(sm){
+        padding-block: 20px 20px;
+        &_head{
+            h1{font-size: 18px;}
+        }
+        .accordion{
+            &-item{margin-bottom: 5px;}
+            &-button{
+                font-size: 15px;
+                padding: 12px 55px 12px 12px;
+                &:after{width: 28px;height: 28px;font-size: 11px;}
+                span{margin-right: 7px;}
+            }
+            &-body{
+                font-size: 14px;
+                padding: 0 15px 15px 28px;
+            }
+        }
+    }
+    @media(max-width: 414px){
+        .accordion{
+            &-button{
+                font-size: 14px;
+                // align-items: start;
+            }
+        }
+    }
+}

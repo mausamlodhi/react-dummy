@@ -1,0 +1,16 @@
+export const text = {
+  email: "Email",
+  reply: "Reply",
+  cancel: "Cancel",
+  pendingQuery: "Pending Query",
+  searchByUser: "User Name, Email, Description",
+  description: "Description",
+  category: "Category",
+  date: "Date",
+  emailAddress: "Email Address",
+  userName: "User Name",
+  serialNo: "S.No.",
+  pendingQueries: "PENDING QUERIES",
+  response: "Response",
+  repliedQueries: "REPLIED QUERIES",
+};

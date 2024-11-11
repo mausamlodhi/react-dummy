@@ -1,0 +1,228 @@
+.pricingPage{
+    &_head{
+        margin-bottom: 30px;
+        h3{font-size: 28px;color: color(600);text-transform: uppercase;margin-bottom: 7px;}
+        h1{font-size: 48px;color: color(700);line-height: 1.35;}
+    }
+    &_box{
+        padding: 35px 30px;
+        border-radius: 8px;
+        @include box-shadow(0px, 3px, 30px, rgba(color(900), 0.10));
+
+        &_plan{
+            h2{font-size: 38px;color: color(700);margin-bottom: 11px;line-height: 1.34;}
+            span{font-size: 16px;}
+        }
+        &_planPrice{
+            margin-top: 25px;
+            h3{font-size: 50px;font-family: font(bd);line-height: 1.34;
+                span{font-size: 24px;line-height: 1.33;font-family: font(rg);}
+            }
+            p{font-size: 18px;line-height: 1.33;}
+        }
+        .saprator{
+            margin: 30px 0;
+            display: inline-block;
+            width: 100%;
+            border: 1px solid color(90);
+        }
+
+        &_desc{
+            ul{
+                li{
+                    font-size: 16px;
+                    line-height: 1.31;
+                    position: relative;
+                    padding-left: 30px;
+                    &::before{
+                        position: absolute;
+                        content: '\e918';
+                        left: 0;
+                        top: 1px;
+                        font-family: icomoon;
+                        color: #38ABC8;
+                    }
+                    &:not(:last-child){
+                        margin-bottom: 18px;
+                    }
+                }
+            }
+            .viewMore{
+                position: relative;
+                margin-top: 30px;
+                &::before{
+                    position: absolute;
+                    content: '';
+                    width: 100%;
+                    height: 70px;
+                    left: 0;
+                    top: -60px;
+                    background: linear-gradient(0deg, color(50) 0%, color(50) 55%, rgba(color(50), 0) 100%);
+                    z-index: 1;
+                }
+                a{
+                    font-size: 18px;
+                    font-family: font(sb);
+                    color: color(600);
+                    position: relative;
+                    z-index: 2;
+                }
+            }
+        }
+        &_btn{
+            margin-top: 40px;
+            .btn-outline-info{
+                border: 2px solid color(500);
+                font-family: font(bd);
+                font-size: 18px;
+                &:disabled{
+                    border-color: color(500)!important;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1699px){
+        &_head{
+            h3{font-size: 24px;}
+            h1{font-size: 40px;}
+        }
+        &_box{
+            &_plan{
+                h2{font-size: 32px;line-height: 1.2;margin-bottom: 8px;}
+            }
+            &_planPrice{
+                margin-top: 15px;
+                h3{font-size: 42px;
+                span{
+                    font-size: 20px;
+                }}
+            }
+        }
+    }
+    @media (max-width: 1499px){
+        &_head{
+            h3{font-size: 22px;}
+            h1{font-size: 34px;}
+        }
+        &_box{
+            &_plan{
+                h2{font-size: 28px;}
+            }
+            &_planPrice{
+                h3{font-size: 36px;
+                span{
+                    font-size: 18px;
+                }}
+            }
+            &_desc{
+                ul{
+                    li{
+                        &:not(:last-child){margin-bottom: 15px;}
+                    }
+                }
+            }
+            &_btn{
+                margin-top: 30px;
+            }
+        }
+    }
+    @include media-breakpoint-up(xxl){
+        &_box{
+            &_btn{
+                .btn-outline-info{
+                    height: 54px;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(xxl){
+        &_head{
+            h3{font-size: 20px;}
+            h1{font-size: 30px;}
+        }
+        &_box{
+            padding: 25px 20px;
+            &_plan{
+                h2{font-size: 24px;margin-bottom: 5px;}
+            }
+            &_planPrice{
+                h3{font-size: 28px;}
+                p{font-size: 16px;}
+            }
+            .saprator{margin: 20px 0;}
+            &_desc{
+                ul{
+                    li{font-size: 15px;}
+                }
+                .viewMore{
+                    margin-top: 20px;
+                    a{font-size: 16px;}
+                    &::before{
+                        top: -50px;
+                    }
+                }
+            }
+            &_btn{margin-top: 25px;
+                .btn-outline-info{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(xl){
+        &_head{
+            margin-bottom: 20px;
+            h3{font-size: 18px;margin-bottom: 5px;}
+            h1{font-size: 26px;}
+        }
+        &_box{
+            padding: 15px;
+            &_plan{
+                h2{font-size: 22px;margin-bottom: 5px;}
+            }
+            &_planPrice{
+                h3{font-size: 26px;
+                span{
+                    font-size: 16px;
+                }}
+            }
+        }
+    }
+    @include media-breakpoint-down(md){
+        &_head{
+            h3{font-size: 16px;}
+            h1{font-size: 22px;}
+        }
+    }
+    @include media-breakpoint-down(sm){
+        &_head{
+            margin-bottom: 15px;
+            h3{font-size: 14px;}
+            h1{font-size: 18px;}
+        }
+        &_box{
+            padding: 15px;
+            &_plan{
+                h2{font-size: 20px;}
+                span{font-size: 15px;}
+            }
+            &_planPrice{
+                margin-top: 10px;
+                h3{font-size: 22px;
+                span{font-size: 14px;}
+                }
+                p{font-size: 14px;}
+            }
+            .saprator{margin: 15px 0;}
+            &_desc{
+                ul{
+                    li{
+                        &:not(:last-child){margin-bottom: 10px;}
+                    }
+                }
+            }
+            &_btn{margin-top: 15px;}
+        }
+    }
+}

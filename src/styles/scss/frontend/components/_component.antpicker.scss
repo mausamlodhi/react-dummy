@@ -1,0 +1,87 @@
+$datePicker-color: color(500) !default;
+
+.ant-picker{
+    &-focused{
+        box-shadow: none;
+        border-color: color(500);
+    }
+    &.ant-picker-disabled{
+        background-color: color(70);
+    }
+    .ant-picker-input{
+        position: static;
+        height: 100%;
+        input{
+            font-size: 16px;
+            @include placeholder{color: rgba( color(700), 0.7); font-family: font(rg);}
+        }
+    }
+    &-suffix{
+        @include absolutecenter(y);
+        right: 15px;
+        margin: 0;
+        font-size: 20px;
+        opacity: 0.60;
+    }
+    &-cell-in-view{
+        &.ant-picker-cell-today{
+            .ant-picker-cell-inner{
+                background-color: lighten($color: $datePicker-color, $amount: 40%);
+                color: color(550);
+                &:before{content: none !important;}
+            }
+        }
+        &.ant-picker-cell-selected{
+            .ant-picker-cell-inner{
+                background-color: $datePicker-color !important;
+                color: color(50);
+                &:before{content: none !important;}
+            }
+        }
+    }
+    &-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):not(.ant-picker-cell-range-hover-start):not(.ant-picker-cell-range-hover-end) .ant-picker-cell-inner{
+        background-color: $datePicker-color !important;
+        color: color(50);
+    }
+    &-header-view{
+        button{
+            &:hover{
+                color: $datePicker-color !important;
+            }
+        }
+    }
+    &-footer{
+        .ant-picker-today-btn{
+            color: $datePicker-color;
+        }
+    }
+    &-dropdown{
+        z-index: 1060;
+    }
+    &-now{
+        .ant-picker-now-btn{color: $datePicker-color;}
+    }
+    &-ok{
+        .ant-btn-primary{
+            &:not(disabled){
+                background: $datePicker-color; border-color: $datePicker-color;
+            }
+        }
+    }
+    @include media-breakpoint-down(lg){
+        // &.form-control{
+        //     padding-left: (45px + 15px);
+        // }
+    }
+    @include media-breakpoint-down(md){
+        // &.form-control{
+        //     padding-left: (40px + 15px);
+        // }
+        input{font-size: 14px;}
+    }
+    @include media-breakpoint-down(sm){
+        &-suffix{
+            font-size: 16px;
+        }
+    }
+}

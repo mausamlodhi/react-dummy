@@ -1,0 +1,40 @@
+.ant-select-dropdown {
+  background-color: $ant-select-bg-color;
+  border-radius: $ant-select-border-radius;
+  box-shadow: $ant-select-box-shadow;
+  border: $ant-select-border-width solid $ant-select-border-color;
+  font-family: $ant-select-font-family;
+  font-size: $ant-select-font-size;
+  font-weight: $ant-select-font-weight;
+  z-index: 1051;
+  padding: 6px;
+  .ant-select-item {
+    padding: .375rem ($ant-select-padding-x - .25rem);
+    border-radius: $ant-select-border-radius;
+    user-select: none;
+    -webkit-user-select: none;
+    &:not(:last-child){
+      margin-bottom: 0.125rem;
+    }
+    &-option-active, &-option-selected{
+      background-color: $ant-select-dropdown-item-active;
+    }
+    .ant-select-lg &{
+      padding: .5rem ($ant-select-padding-x-lg - .25rem);
+    }
+    .ant-select-item-option-state{
+      .anticon-check{
+        svg{fill: $accent-color;}
+      }
+    }
+  }
+  .ant-select-open & {
+    border-color: $ant-select-open-border-color;
+  }
+  // .ant-select &{
+  //   .rc-virtual-list-holder {
+  //     max-height: 210px !important;
+  //     overflow-y: auto;
+  //   }
+  // }
+}

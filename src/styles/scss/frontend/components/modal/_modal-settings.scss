@@ -1,0 +1,76 @@
+.modalSettings{
+    &_head{
+        margin-bottom: 20px;
+        h3{font-size: 18px;font-family: font(sb);margin-bottom: 9px;}
+        p{font-size: 14px;}
+    }
+    &_switch{
+        margin-bottom: 40px;
+        h6{
+            font-size: 16px;
+        }
+        .ant-switch{
+            min-width: 37px;
+        }
+    }
+    .myProfile{
+        &_left{
+            .nav-item{
+                border-radius: 8px;
+                max-width: 243px;
+                &:not(:last-child){
+                    margin-bottom: 8px;
+                }
+                .nav-link{
+                    font-size: 18px;
+                    padding: 6px 10px;
+                    font-family: font(rg);
+                    &.active{
+                        background-color: #F3F5F8;
+                    }
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(lg){
+        .myProfile{
+            &_left{
+                position: static!important;
+                box-shadow: none;
+            }
+        }
+        
+    }
+    @include media-breakpoint-down(md){
+        &_head{
+            margin-bottom: 20px;
+            h3{font-size: 16px;}
+        }
+        &_switch{
+            margin-bottom: 25px;
+            h6{
+                font-size: 15px;
+            }
+        }
+        .myProfile{
+            &_left{
+                margin-bottom: 15px;
+                max-width: 100%;
+                .nav-item{
+                    max-width: 100%;
+                    .nav-link{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(sm){
+        &_switch{
+            margin-bottom: 20px;
+            h6{
+                font-size: 14px;
+            }
+        }
+    }
+}

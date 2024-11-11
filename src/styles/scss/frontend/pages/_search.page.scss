@@ -1,0 +1,113 @@
+.searchPage{
+    &_tabs{
+        padding: 0 45px; border-bottom:1px solid rgba(color(900), 0.1); background-color: color(60);
+        position: sticky; top: 70px; z-index: 9;
+        h1{font-size: 16px;}
+        .nav{
+            margin-left: 25px;
+            &-item{
+                .nav-link{
+                    font-size: 16px; font-family: font(sb); color: rgba(color(700), 0.7); border: none; border-bottom: 2px solid transparent;
+                    padding: 22px 7px;
+                    &:hover{color: color(700);}
+                    &.active{color: color(700); background: transparent !important; border-color: color(500);}
+                }
+                &:not(:last-child){
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+    &_cnt{
+        padding: 20px 45px;
+        .tab-content{max-width: 835px; margin: 0 auto;}
+        .resultSec{
+            + .resultSec{margin-top: 20px;}
+            &_title{font-size: 16px;}
+            &_list{
+                margin: 13px 0 10px;
+                &_item{
+                    a{padding: 12px; border-radius: 5px; background: color(50); color: color(700);}
+                    &:hover{
+                        a{box-shadow: 0 2px 8px rgba(color(900), 0.1);}
+                    }
+                    &:not(:last-child){margin-bottom: 6px;}
+                    &:not(.resultSec_list_item-people){
+                        a{width: 100%;}
+                    }
+                    &-people{
+                        a{display: inline-block;}
+                        p{color: rgba(color(700), 0.7);}
+                    }
+                    .userImg{margin-right: 15px; align-self: flex-start;}
+                    .userInfo{
+                        h4{
+                            font-size: 16px; margin-bottom: 5px;
+                            span{font-size: 13px; color: rgba(color(700), 0.7); margin-left: 25px; font-family: font(rg);}
+                        }
+                        .info{font-size: 13px; color: rgba(color(700), 0.7); margin-bottom: 6px !important; line-height: 1.2;}
+                    }
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(xxl){
+        &_tabs{
+            padding: 0 30px;
+            h1{font-size: 16px;}
+            .nav{
+                &-item{
+                    .nav-link{
+                        padding: 16px 7px;
+                    }
+                }
+            }
+        }
+        &_cnt{
+            padding: 15px 30px;
+        }
+    }
+    @include media-breakpoint-down(xl){
+        &_tabs{padding: 0 12px; top: 64px; }
+        &_cnt{
+            padding: 12px;
+            .tab-content{max-width: 100%;}
+        }
+    }
+    @include media-breakpoint-down(lg){
+        &_tabs{
+            .nav{
+                margin-left: 15px;
+                &-item{
+                    .nav-link{
+                        font-size: 15px; padding: 12px 7px;
+                    }
+                    &:not(:last-child){
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+        &_cnt{
+            padding: 12px;
+            .tab-content{max-width: 100%;}
+        }
+    }
+    @include media-breakpoint-down(sm){
+        &_cnt{
+            .resultSec{
+                &_list{
+                    &_item{
+                        a{padding: 8px;}
+                        .userImg{margin-right: 10px;}
+                        .userInfo{
+                            h4{
+                                span{display: block; margin-left: 0; margin-top: 5px;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

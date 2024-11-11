@@ -1,0 +1,16 @@
+export const text = {
+  title: "Manage Participants",
+  members: "Members",
+  channel: "Channels",
+  employee: "Employee",
+  guest: "Guests",
+  owner: "Owner",
+  name: "Name",
+  email: "Email ID",
+  action: "Action",
+  videoCall: "Video Call",
+  call: "Call",
+  copy: "Copy Email",
+  remove: "Remove",
+  invite: "Invite",
+};

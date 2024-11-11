@@ -1,0 +1,103 @@
+.modal {
+    &-header {
+        display: block;padding: 40px 40px 30px;border-bottom: 0;
+        h5{font-size: 22px;font-family: font(bd);color: color(900);}
+        p{font-size: 16px;font-family: font(rg);margin-bottom: 0;color: color(900);opacity: 0.70;margin-top: 10px;}
+    }
+    &-content{border-radius: 5px;}
+    &-body {padding: 0 40px 40px;}
+    &-backdrop{opacity: 0.7 !important;}
+    .btn-close{
+        position: absolute;top:-10px;right: -12px;font-size: 15px;color: color(50);opacity: 1;padding: 0; z-index: 1;
+        &:focus{box-shadow: none;}
+    }
+    .modalFooter{
+        margin-top: 40px;
+        p{margin-bottom: 0;color: #696969;}
+    }
+    .modalHeader{
+        padding-top: 40px;
+        margin-bottom: 35px;
+        h3{font-size: 22px;font-family: font(bd); margin: 0;}
+        h3+p{margin-top: 10px;}
+    }
+    &.noHeader{
+        .modal-header{padding: 0;}
+    }
+    .sharechannelLink{
+        .modal-header{
+            padding-bottom: 0;
+        }
+        .form-control{
+            padding-right: 125px;
+            height: 52px;
+            font-size: 16px;
+        }
+        &_btn{
+            position: absolute;
+            right: 6px !important;
+            top: 6px;
+            height: 40px;
+            padding-inline: 20px;
+            min-width: 112px;
+        }
+    }
+    @include media-breakpoint-up(sm) {
+        &-sm{max-width: 550px;}
+        &-md{max-width: 630px;}
+        &-lg{max-width: 930px;}
+    }
+    @include media-breakpoint-down(xxl) {
+        &-header {
+            padding: 20px;
+            h5{font-size: 20px;}
+        }
+        .modalHeader{
+            padding-top: 20px;
+            margin-bottom: 25px;
+            h3{font-size: 20px;}
+        }
+        &-body{padding: 0 20px 20px;}
+    }
+    @include media-breakpoint-down(xl) {
+        &-header {
+            h5{font-size: 18px;}
+            p{font-size: 14px;}
+        }
+        .modalHeader{
+            h3{font-size: 18px;}
+        }
+        .modalFooter{margin-top: 20px;}
+    }
+    @include media-breakpoint-down(lg) {
+        &-header {padding: 15px;}
+        .btn-close{
+            right:0px;top:0px;width:32px;height:32px;font-size: 12px;border-radius: 50%;
+            background-color:color(600);
+            &.btn-close-white{
+                filter: inherit;
+            }
+        }
+        .modalHeader{
+            padding-top: 15px;
+            margin-bottom: 20px;
+        }
+        &-body{padding: 0 15px 15px;}
+        &-dialog{padding: 0 10px;}
+    }
+    @include media-breakpoint-down(sm) {
+        .btn-close{  width: 25px; height: 25px; font-size: 10px;}
+    }
+    @include media-breakpoint-down(sm) {
+        &-header {
+            padding: 10px;
+            h5{font-size: 16px;}
+        }
+        .modalHeader{
+            h3{font-size: 16px;}
+        }
+        &-dialog{padding: 0;}
+        // .btn-close{right: 10px; top: -15px;}
+    }
+    
+}

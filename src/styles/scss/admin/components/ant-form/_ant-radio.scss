@@ -1,0 +1,40 @@
+$ant-checkbox-bg-active : $form-check-input-checked-bg-color;
+$ant-checkbox-border-active : $ant-checkbox-bg-active;
+.ant-radio{
+    &-wrapper{
+        .ant-radio-inner{
+            @include media-breakpoint-up(xl){
+                width: 18px; height: 18px; border-width: 2px;
+            }
+        }
+        &:hover{
+            .ant-radio-inner{
+                border-color: $ant-checkbox-border-active;
+            }
+        }
+        .ant-radio-checked{
+            &:after{
+                border-color: $ant-checkbox-border-active;
+            }
+            .ant-radio-inner{
+                border-color: $ant-checkbox-border-active;
+                background-color: transparent;
+                &:after{
+                    background-color: $ant-checkbox-bg-active;
+                    @include media-breakpoint-up(xl){
+                        width: 18px; height: 18px;
+                        margin-block-start: -9px;
+                        margin-inline-start: -9px;
+                    }
+                }
+            }
+        }
+    }
+    &-input{
+        &:focus{
+            &+.ant-radio-inner{
+                border-color: $ant-checkbox-border-active;
+            }
+        }
+    }
+}

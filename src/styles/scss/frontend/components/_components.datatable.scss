@@ -1,0 +1,132 @@
+.userDataTable{
+    .user{
+        &-img{margin-right: 12px;}
+        &-info{
+            h3{font-size: 20px; line-height: 1; color: color(700); margin: 0;}
+        }
+    }
+    .datatable-wrap {
+        max-width: 100%;
+        overflow-x: inherit;
+    }
+    .table{
+        margin-top: -10px;
+        border-collapse: separate;
+        border-spacing: 0 10px;
+        table-layout: initial;
+        .w-10{width: 100px;}
+        &-dropDown{
+            .icon{
+                font-size:9px;color:color(580);
+            }
+        }
+        tr{
+            td, th{
+                border: none; vertical-align: middle; font-size: 16px; white-space: nowrap;
+            }
+        }
+        thead{
+            tr{
+                td, th{
+                    padding: 3px 10px; font-family: font(rg); font-weight: normal;
+                }
+            }
+        }
+        tbody{
+            tr{
+                td, th{
+                    background: #fff; padding: 10px; font-family: font(sb);
+                    &:first-child{
+                        border-radius: 4px 0 0 4px;
+                    }
+                    &:last-child{
+                        border-radius: 0 4px 4px 0;
+                    }
+                    .invited{color: #E84949;}
+                }
+            }
+        }
+        .actionMenu{
+            li{
+                &:not(:last-child){
+                    margin-right: 15px;
+                }
+                .btn.btn-sm{min-width: 90px;}
+                .btn-accept{
+                    background: #07C45A; color: color(50) !important;
+                    &:hover,&:focus, &:active{
+                        background-color: darken(#07C45A, 5%) !important;
+                    }
+                }
+            }
+            a{
+                padding: 3px; display: flex; align-items: center;
+                span{
+                    opacity: 0.65; font-size: 18px; @include transition(all 0.3s ease-in-out);
+                    &:before{color: color(550);}
+                }
+                &:hover{
+                    span{opacity: 1;}
+                }
+            }
+        }
+    }
+    @media (max-width: 1599px) {
+        .user{
+            &-info{
+                h3{font-size: 18px;}
+            }
+        }
+        .table{
+            tr{
+                td, th{font-size: 15px;}
+            }
+            thead{
+                tr{
+                    td, th{
+                        padding: 2px 8px;
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    td, th{
+                        padding: 8px; font-family: font(sb);
+                    }
+                }
+            }
+            .actionMenu{
+                li{
+                    &:not(:last-child){
+                        margin-right: 10px;
+                    }
+                    .btn.btn-sm{min-width: 90px;}
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(xxl){
+        .table{
+            margin-top: -7px;
+            border-spacing: 0 7px;
+            tr{
+                td, th{font-size: 14px;}
+            }
+            .user{
+                &-img{margin-right: 8px;}
+                &-info{
+                    h3{font-size: 15px;}
+                }
+            }
+            .actionMenu{
+                li{
+                    &:not(:last-child){
+                        margin-right: 6px;
+                    }
+                    span{font-size: 16px;}
+                    .btn.btn-sm{min-width: auto;}
+                }
+            }
+        }
+    }
+}

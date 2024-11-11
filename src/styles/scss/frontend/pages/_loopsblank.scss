@@ -1,0 +1,60 @@
+.loopsBlank{
+    padding: 90px 0;
+    &_head{
+        max-width: 365px;
+        margin: 0 auto;
+        h1{
+            font-size: 30px;
+            font-family: font(bd);
+            line-height: 1.33;
+            margin-bottom: 15px;
+        }
+        p{font-size: 20px;margin-bottom: 35px;}
+        .btn-primary{
+            font-size: 20px;
+            font-family: font(rg);
+        }
+    }
+    @media (max-width: 1499px){
+        padding: 65px 0;
+        &_head{
+            h1{font-size: 26px;margin-bottom: 10px;}
+            p{font-size: 18px;margin-bottom: 25px;}
+            .btn-primary{font-size: 18px;}
+        }
+    }
+    @include media-breakpoint-down(xxl){
+        padding: 40px 0;
+        &_head{
+            h1{font-size: 24px;margin-bottom: 10px;}
+        }
+    }
+    @include media-breakpoint-down(xl){
+        &_head{
+            max-width: 100%;
+            p{font-size: 16px;}
+        }
+    }
+    @include media-breakpoint-down(lg){
+        padding: 25px 0;
+        &_head{
+            margin-bottom: 20px;
+            h1{font-size: 20px;}
+            p{margin-bottom: 15px;}
+        }
+    }
+    @include media-breakpoint-down(md){
+        padding: 20px 0;
+        &_head{
+            h1{font-size: 18px;margin-bottom: 5px;}
+            p{margin-bottom: 10px;}
+            .btn-primary{font-size: 16px;}
+        }
+    }
+    @include media-breakpoint-down(sm){
+        &_head{
+            h1{font-size: 16px;}
+            p{font-size: 14px;}
+        }
+    }
+}

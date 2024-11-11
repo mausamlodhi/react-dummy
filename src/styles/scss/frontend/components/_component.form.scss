@@ -1,0 +1,350 @@
+.form-group {
+  margin-bottom: 20px;
+  .form-control {
+    height: 52px;
+    outline: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-family: font(rg);
+    color: color(700);
+    background-color: color(50);
+    font-size: 16px !important;
+    border-color: color(90);
+    &:focus {
+      border-color: color(500);
+      box-shadow: none;
+    }
+    &:disabled {
+      background-color: color(50);
+      opacity: 0.8;
+    }
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px color(80) inset !important;
+    }
+    @include placeholder {
+      color: rgba(color(700), 0.7);
+      font-family: font(rg);
+    }
+  }
+  .form-control-wrap {
+    position: relative;
+    .form-icon {
+      position: absolute;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 52px;
+      height: 52px;
+      z-index: 10;
+      em {
+        font-size: 18px;
+        color: color(500);
+      }
+      + .form-control {
+        padding-left: calc(52px + 12px);
+      }
+      &-right {
+        left: auto;
+        right: 1px;
+        + .form-control {
+          padding-left: 15px;
+          padding-right: calc(52px + 12px);
+        }
+      }
+    }
+    &.phoneNumber {
+      &:before {
+        content: "+1";
+        color: color(580);
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        z-index: 1;
+      }
+      .form-control {
+        padding-left: 45px;
+      }
+    }
+  }
+  label {
+    font-size: 16px;
+    font-family: font(rg);
+    color: color(700);
+    margin-bottom: 8px;
+    em {
+      font-size: 17px;
+    }
+  }
+  textarea.form-control {
+    height: 100px;
+    resize: none;
+  }
+  .VerifyInput {
+    input {
+      height: 56px;
+      background-color: color(50);
+      border-color: #dcdcdc;
+    }
+    .ant-form-item {
+      flex: 1;
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+    @media (max-width: 420px) {
+      .ant-form-item {
+        &:not(:last-child) {
+          margin-right: 5px;
+        }
+      }
+      input {
+        height: 40px;
+      }
+    }
+  }
+  @include media-breakpoint-down(xxl) {
+    .form-control {
+      height: 45px;
+      font-size: 14px !important;
+      padding: 5px 12px;
+    }
+    .form-control-wrap {
+      .form-icon {
+        height: 45px;
+        width: 45px;
+        em {
+          font-size: 16px;
+        }
+        + .form-control {
+          padding-left: (45px + 12px);
+        }
+      }
+    }
+    label {
+      margin-bottom: 6px;
+      font-size: 14px;
+      em {
+        font-size: 15px;
+      }
+    }
+    margin-bottom: 15px;
+  }
+  @include media-breakpoint-down(lg) {
+    .form-control {
+      height: 40px;
+      font-size: 14px !important;
+    }
+    .form-control-wrap {
+      .form-icon {
+        height: 40px;
+        width: 40px;
+        em {
+          font-size: 15px;
+        }
+        + .form-control {
+          padding-left: (40px + 12px);
+        }
+      }
+    }
+  }
+}
+
+.ant-checkbox-wrapper {
+  font-family: font(sb);
+  .ant-checkbox-checked {
+    .ant-checkbox-inner {
+      background-color: color(500) !important;
+      border-color: color(500) !important;
+    }
+  }
+  .ant-checkbox-inner {
+    background-color: transparent;
+    &:after {
+      left: 25%;
+    }
+  }
+  &:hover {
+    .ant-checkbox {
+      &:after {
+        border-color: color(500);
+      }
+    }
+    .ant-checkbox-inner {
+      border-color: color(500) !important;
+    }
+  }
+  &.dark {
+    .ant-checkbox-checked {
+      .ant-checkbox-inner {
+        background-color: color(550);
+        border-color: color(550);
+      }
+    }
+    .ant-checkbox-inner {
+      background-color: transparent;
+      border-color: color(550);
+    }
+    &:hover {
+      .ant-checkbox {
+        &:after {
+          border-color: color(550);
+        }
+      }
+      .ant-checkbox-inner {
+        border-color: color(550);
+      }
+    }
+  }
+  .ant-checkbox {
+    // top: 5px;
+    &-inner {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    .ant-checkbox {
+      &-inner {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 12px;
+  }
+  @include media-breakpoint-down(sm) {
+    .ant-checkbox {
+      & + span {
+        padding-right: 2px;
+        padding-left: 5px;
+      }
+    }
+  }
+}
+
+.ant-radio-wrapper {
+  .ant-radio-checked {
+    .ant-radio-inner {
+      border-color: color(500);
+      background-color: transparent;
+      &::after {
+        background-color: color(500);
+        transform: scale(0.5);
+      }
+    }
+    &::after {
+      border: 1px solid color(500);
+    }
+  }
+  .ant-radio {
+    &-inner {
+      width: 20px;
+      height: 20px;
+    }
+    &:hover {
+      .ant-radio-inner {
+        border-color: color(500) !important;
+      }
+    }
+  }
+  &:hover {
+    .ant-radio-inner {
+      border-color: color(500);
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    .ant-radio {
+      &-inner {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}
+.ant-switch {
+  background-color: color(580);
+  &.ant-switch-checked {
+    background: color(500);
+    &:hover:not(.ant-switch-disabled) {
+      background: lighten(color(500), 5%);
+    }
+  }
+}
+
+.mobileField {
+  &.react-tel-input {
+    .form-control {
+      width: 100%;
+      background-color: color(80);
+      height: 50px;
+      border-color: transparent;
+      padding-left: 60px;
+      &:focus {
+        border-color: color(500);
+        + .flag-dropdown {
+          border-color: color(500) #e4e4e4 color(500) color(500);
+        }
+      }
+    }
+    .flag-dropdown {
+      transition: border-color 0.15s ease-in-out;
+      border-width: 1px;
+      border-color: transparent #e4e4e4 transparent transparent;
+      background-color: color(80);
+      .selected-flag {
+        width: 50px;
+        border-radius: 5px 0 0 5px !important;
+        &:hover,
+        &:focus {
+          background-color: color(80);
+        }
+        .arrow {
+          border: none !important;
+          left: 45px;
+          &:after {
+            content: "\e901";
+            font-family: "icomoon";
+            position: absolute;
+            right: 10px;
+            top: -5px;
+            font-size: 10px;
+            color: rgba(color(900), 0.5);
+            transition: all 0.5s;
+          }
+          &.up {
+            &:after {
+              transform: rotate(-180deg);
+            }
+          }
+        }
+      }
+      .country-list {
+        box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+          0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+        margin-top: 5px;
+      }
+      &.open {
+        .selected-flag {
+          background-color: color(80);
+        }
+      }
+    }
+    @include media-breakpoint-down(lg) {
+      .form-control {
+        height: 45px;
+        padding: 5px 12px 5px 60px;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      .form-control {
+        height: 40px;
+        font-size: 14px !important;
+      }
+    }
+  }
+}

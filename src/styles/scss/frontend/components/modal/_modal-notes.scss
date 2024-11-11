@@ -1,0 +1,22 @@
+.notesModal{
+    &_details{
+        .user{
+            .userAvatar{margin-right: 10px;}
+            &_info{
+                h3{font-size: 16px; margin-right: 10px !important;}
+            }
+        }
+        h2{margin: 15px 0; font-size: 16px;}
+        p{line-height: 1.36; font-size: 14px; color: rgba(color(700), 0.7);}
+    }
+    @include media-breakpoint-down(md){
+        &_details{
+            .user{
+                &_info{
+                    h3{font-size: 15px;}
+                }
+            }
+            h2{margin: 10px 0; font-size: 15px;}
+        }
+    }
+}

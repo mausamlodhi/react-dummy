@@ -1,0 +1,55 @@
+// Container
+$ant-select-color:                 $base-text !default;
+$ant-select-placeholder-color:     $base-light !default;
+$ant-select-bg-color:              $white !default;
+
+$ant-select-dropdown-item-active:  $light !default;
+$ant-select-dropdown-item-disabled:rgba($base-light,.7) !default;
+
+$ant-select-border-width:          1px !default;
+$ant-select-border-color:          $input-border-color !default;
+$ant-select-focus-border-color:    $input-focus-border-color !default;
+$ant-select-open-border-color:     darken($input-border-color, 12%) !default;
+$ant-select-box-shadow:            none !default;
+$ant-select-focus-box-shadow:      $input-focus-box-shadow !default;
+$ant-select-transition:            all .3s !default;
+$ant-select-border-radius:         $border-radius !default;
+
+$ant-select-font-family:           $base-font-family !default;
+$ant-select-font-weight:           $input-font-weight !default;
+
+$ant-select-padding-x:             $input-padding-x !default;
+$ant-select-padding-y:             $input-padding-y !default;
+$ant-select-font-size:             $input-font-size !default;
+$ant-select-line-height:           $input-line-height !default;
+$ant-select-input-height:          $input-height !default;
+
+$ant-select-padding-x-sm:          $input-padding-x-sm !default;
+$ant-select-padding-y-sm:          $input-padding-y-sm !default;
+$ant-select-font-size-sm:          $input-font-size-sm !default;
+$ant-select-line-height-sm:        $input-line-height-sm !default;
+$ant-select-input-height-sm:       $input-height-sm !default;
+
+$ant-select-padding-x-lg:          $input-padding-x-lg !default;
+$ant-select-padding-y-lg:          $input-padding-y-lg !default;
+$ant-select-font-size-lg:          $input-font-size-lg !default;
+$ant-select-line-height-lg:        $input-line-height-lg !default;
+$ant-select-input-height-lg:       $input-height-lg !default;
+
+$ant-select-padding-x-xl:          $input-padding-x-xl !default;
+$ant-select-padding-y-xl:          $input-padding-y-xl !default;
+$ant-select-font-size-xl:          $input-font-size-xl !default;
+$ant-select-line-height-xl:        $input-line-height-xl !default;
+$ant-select-input-height-xl:       $input-height-xl !default;
+
+$ant-select-arrow-font-family:     $nk-dashlite-font !default;
+$ant-select-arrow-down:            $ni-chevron-down !default;
+$ant-select-arrow-up:              $ni-chevron-up !default;
+
+
+/** Select2 */
+// .ant-select {
+//   // @import "multiple";
+// }
+@import "dropdown";
+@import "theme/default/layout";

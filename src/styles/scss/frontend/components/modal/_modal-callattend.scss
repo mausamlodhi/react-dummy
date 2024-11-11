@@ -1,0 +1,62 @@
+.callAttend{
+    max-width: 350px;
+    margin: 0 auto;
+    .modal-body{
+        padding: 0;
+    }
+    .modalFooter{
+        margin-top: 0;
+        padding: 25px 40px;
+        @include box-shadow(0px, 7px, 15px, rgba(color(900), 0.3));
+        .btn{
+            min-width: 122px;
+            border: 0;
+            border-radius: 10px;
+            span{font-size: 24px;
+            &:before{color: color(50);}}
+        }
+        .btn-success{background-color: #07c45a;}
+        .btn-danger{background-color: #d13438;
+            span{
+                transform: rotate(136deg);
+            }
+        }
+    }
+    &_cnt{
+        text-align: center;
+        padding: 35px 35px 55px 35px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        h3{
+            font-size: 20px;
+            font-family: font(bd);
+        }
+        p{font-size: 20px;font-family: font(sb);margin-bottom: 50px;}
+        img{
+            width: 107px;
+            height: 107px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+    }
+
+    @media (max-width: 1499px){
+        max-width: 280px;
+        .modalFooter{
+            padding: 18px 30px;
+            .btn{min-width: 100px;height: 40px;span{font-size: 20px;}}
+        }
+        &_cnt{
+            padding: 20px 25px 35px 25px;
+            h3{font-size: 16px;margin-bottom: 3px;}
+            p{font-size: 16px;margin-bottom: 30px;}
+            img{width: 90px;height: 90px;}
+        }
+    }
+    @include media-breakpoint-down(sm){
+        &_cnt{
+            h3{font-size: 16px;}
+            p{font-size: 15px;margin-bottom: 30px;}
+        }
+    }
+}

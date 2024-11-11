@@ -1,0 +1,201 @@
+.searchBox{
+    max-width: 840px;
+    margin-right: 15px;
+    .form-group{
+        margin-bottom: 0;
+        &-search{display: none;}
+        &-dark{
+            margin-bottom: 18px;
+            .form-control{
+                background-color: #474747;
+                color: rgba(color(50), 0.70);
+                &::placeholder{color: rgba(color(50), 0.70);}
+            }
+            .form-icon .icon-search:before{color: color(50);}
+
+            .searchBox_list{
+                background-color: #6e6e6e;
+                .searchBoxBlk{
+                    background-color: #474747;
+                    padding: 8px 0;
+                }
+                .searchList{
+                    background-color: #474747;
+                    h3{color: color(50);}
+                    + .searchList{
+                        &-files{
+                            display: none;
+                        }
+                    }
+                    &_item{
+                        padding: 8px 15px;
+                        .itemInfo{
+                            p{color: color(50); span{color: color(50);}}
+                        }
+                        &:hover{
+                            background-color: #585858;
+                        }
+                    }
+                }
+                .viewAll{
+                    background-color: #6e6e6e;
+                    color: color(50);
+                    padding: 9px 15px;
+                    margin-top: 0;
+                    .icon-search:before{
+                        color: color(50);
+                    }
+                    strong{margin-left: 20px;}
+                }
+            }
+        }
+        .form-control-wrap .form-icon + .form-control{padding-left: 46px;}
+    }
+    &_list{
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 0;
+        width: 100%;
+        display: none;
+        background-color: color(50);
+        border-radius: 5px;
+        z-index: 11;
+        box-shadow: 0 3px 20px rgba(color(900), 0.2);
+        max-height: 550px;
+        overflow: auto;
+        .viewAll{
+            background: color(60);
+            display: flex; align-items: center;
+            padding: 14px 25px; margin-top: 4px;
+            color: color(700);
+            strong{margin-right: 15px; margin-left: 30px; font-family: font(sb);}
+        }
+        .searchBoxBlk{
+            padding: 15px 0;
+        }
+        .searchList{
+            + .searchList{
+                margin-top: 20px;
+            }
+            .title{
+                font-size: 14px; line-height: 1.43; margin-bottom: 5px; padding: 0 25px;
+            }
+            &_item{
+                padding: 8px 25px;
+                .userAvatar{margin-right:15px;}
+                p{
+                    margin: 0; color: rgba(color(700), 0.7);
+                    span{font-family: font(bd); color: color(700);}
+                }
+                &:hover{
+                    background: color(60);
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1499px){
+        max-width: 700px;
+        &_list{
+            .viewAll{
+                padding: 9px 15px;font-size: 14px;
+                strong{margin-left: 20px;}
+            }
+            .searchBoxBlk{padding: 10px 0;}
+            .searchList{
+                &_item{
+                    padding: 5px 20px;
+                    p{font-size: 14px;}
+                    .userAvatar-sm{width: 30px;height: 30px;}
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(xl){
+        max-width: 400px;
+        &_list{
+            .searchBoxBlk{
+                padding: 10px 0;
+            }
+            .searchList{
+                + .searchList{
+                    margin-top: 10px;
+                }
+                .title{
+                    padding: 0 15px;
+                }
+                &_item{
+                    padding: 8px 15px;
+                    .userAvatar{
+                        margin-right: 10px;
+                    }
+                    p{ font-size: 14px;}
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(lg){
+        .form-group{
+            &-dark{margin-bottom: 10px;}
+            .form-control {
+                height: 40px;
+                padding-left: 40px !important;
+            }
+        }
+        &_list{
+            .viewAll{
+                padding: 10px 15px;
+                strong{margin: 0 10px; max-width: 110px; display: inline-block; vertical-align: middle; text-overflow: ellipsis; overflow: hidden;}
+            }
+            .searchBoxBlk{
+                padding: 10px 0;
+            }
+            .searchList{
+                + .searchList{
+                    margin-top: 10px;
+                }
+                .title{
+                    padding: 0 15px;
+                }
+                &_item{
+                    padding: 4px 15px;
+                    .userAvatar{
+                        margin-right: 10px;
+                    }
+                    p{ font-size: 14px;}
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(sm){
+        position: static;
+        &_list{
+            width: calc(100% - 24px);
+            margin: 0 auto;
+            right: 0;
+        }
+    }
+    @media (max-width: 460px){
+        display: none;
+        position: absolute;
+        width: 100%;
+        max-width: calc(100% - 15px);
+        z-index: 9;
+        left: 7px;
+        &-open{display: block;}
+        .form-group{
+            .form-control{padding-right: 40px;}
+            &-search{display: block; position: absolute; right: 0; top: 0;
+                font-size: 12px;
+                cursor: pointer;
+                width: 40px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;}
+        }
+        &_list{
+            width: 100%;
+        }
+    }
+}

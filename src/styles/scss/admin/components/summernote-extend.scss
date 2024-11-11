@@ -1,0 +1,33 @@
+.note-modal{
+    z-index: 5052;
+    .modal-dialog{
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .modal-header{
+        flex-direction: row-reverse;
+        .close {
+            font-size: 25px;
+        }
+    }
+    .note-btn-primary{
+        &:hover, &:focus, &.focus{
+            border-radius: 4px;
+            background-color: $accent-500;
+        }
+    }
+}
+.note{
+    &-editor{
+        .note-editable{
+            ol, ul{
+                list-style: revert;
+                padding: revert;
+                margin: revert;
+                li {
+                    list-style: revert;
+                }
+            }
+        }
+    }
+}

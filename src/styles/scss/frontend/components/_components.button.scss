@@ -1,0 +1,146 @@
+.btn {
+  cursor: pointer;
+  line-height: normal;
+  font-family: font(sb);
+  font-size:16px;
+  padding: 0 20px;
+  border-radius: 5px;
+  height: 50px;
+  min-width: 130px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  @include transition(all 0.4s);
+  &:focus {box-shadow: none;}
+  &.disabled,
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+    border-color: transparent !important;
+  }
+  em{
+    font-size: 20px; display: inherit;
+    &.icon-left{
+      margin-right: 10px;
+    }
+    &.icon-right{
+      margin-left: 10px;
+    }
+  }
+  &-primary {
+    border: none !important;
+    background: color(600);
+    color: color(800) !important;
+    // $list1: color(450), color(500);
+    // @include linearGradient(left, $list1);
+    &:hover,
+    &:focus,
+    &:active,
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active:focus, 
+    &:disabled, &:disabled{
+      border-color: transparent !important;
+      background-color: rgba($color: color(600), $alpha: 0.9) !important;
+      outline: none;
+      box-shadow: none !important;
+    }
+  }
+  &-info {
+    border-color: transparent;
+    background: color(500);
+    color: color(50);
+    &:hover,
+    &:focus,
+    &:active,
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active:focus , &:disabled, &:disabled{
+      border-color: transparent !important;
+      background-color: rgba(color(500), 0.9) !important;
+      outline: none;
+      color: color(50);
+      box-shadow: none !important;
+    }
+  }
+  &-light {
+    border-color: transparent;
+    background: #E8E8E8;
+    color: rgba(color(900), 0.6) !important;
+    &:hover,
+    &:focus,
+    &:active,
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active:focus , &:disabled, &:disabled{
+      border-color: transparent !important;
+      background-color: rgba($color: #E8E8E8, $alpha: 0.9) !important;
+      outline: none;
+      box-shadow: none !important;
+    }
+  }
+  &-secondary {
+    border-color: transparent;
+    background: color(550);
+    color: color(50) !important;
+    &:hover,
+    &:focus,
+    &:active,
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active:focus , &:disabled, &:disabled{
+      border-color: transparent !important;
+      background-color: rgba($color: color(550), $alpha: 0.9) !important;
+      outline: none;
+      box-shadow: none !important;
+    }
+  }
+  &-outline-info{
+    border-color: color(500);
+    background: transparent;
+    color: color(500) !important;
+    &:hover,
+    &:focus,
+    &:active,
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active:focus , &:disabled, &:disabled{
+      border-color: color(500) !important;
+      background-color: color(500) !important;
+      outline: none;
+      box-shadow: none !important;
+      color: color(50) !important;
+    }
+  }
+  &-md{
+    height: 44px;
+  }
+  
+  &-mw-180{min-width:180px;}
+  @include media-breakpoint-down(xxl) {
+    height: 45px;
+    &-md{
+      height: 40px; font-size: 15px;
+      em{font-size: 16px;}
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    padding: 0 15px;
+  }
+  @include media-breakpoint-down(lg) {
+    font-size: 15px;
+    height: 40px;
+    &-md{height: 38px;}
+    &-mw-180{min-width:auto;}
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 14px;
+    padding: 0 10px;
+    min-width: 100px;
+    em{
+      font-size: 16px;
+      &.icon-left{margin-right: 6px;}
+    }
+  }
+  @include media-breakpoint-up(xs){
+    &-sm{
+      height: 34px;
+      font-size: 14px;
+    }
+  }
+}

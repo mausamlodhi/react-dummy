@@ -1,0 +1,68 @@
+// Fonts
+.font-rg {font-family: font(rg) !important;}
+.font-sb {font-family: font(sb) !important;}
+.font-bd {font-family: font(bd) !important;}
+
+.link-primary {
+  color: color(500) !important;
+  &:hover, &:focus {
+    color: darken(color(500), $amount: 6%) !important;
+  }
+}
+.text-500{color:color(500) !important}
+
+.py-70{
+  padding: 70px 0;
+  @media (max-width: 1599px){
+    padding: 50px 0;
+  }
+  @include media-breakpoint-down(xxl) {
+    padding: 40px 0;
+  }
+  @include media-breakpoint-down(xl) {
+    padding: 30px 0;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 25px 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 20px 0;
+  }
+}
+.py-50{
+  padding: 50px 0;
+  @include media-breakpoint-down(xxl) {
+    padding: 35px 0;
+  }
+  @include media-breakpoint-down(xl) {
+    padding: 30px 0;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 25px 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 20px 0;
+  }
+}
+.downloadSecComing{
+  padding-bottom: 290px;
+  @media (max-width: 1499px){
+    padding-bottom: 260px;
+  }
+  @include media-breakpoint-down(xxl){
+    padding-bottom: 240px;
+  }
+  @include media-breakpoint-down(lg){
+    padding-bottom: 180px;
+  }
+  @include media-breakpoint-down(md){
+    padding-bottom: 140px;
+  }
+}
+.mw-auto{min-width: auto !important;}
+.cursor-pointer{cursor: pointer !important;}
+
+.text{
+  &-success{color:#06C359 !important;}
+  &-danger{color:#E84949 !important;}
+}
